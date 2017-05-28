@@ -19,9 +19,13 @@ require_once('../../php/scripts.php');
 				int2txt($(this), $(this).attr('data-case_val'));
 			});
 			
+			$('input').change(function(){
+				int2txt($(this), $(this).val());
+			});
+			
 		})//jQ END
 		function int2txt($this, val){
-			parseInt(val);
+			val = betterParseInt(val);
 			$this.attr('data-case_val', val);
 			var dl = val.length;
 			var txt = '';
@@ -37,6 +41,32 @@ require_once('../../php/scripts.php');
 			txt += ' zł';
 			$this.val(txt);
 			$this.text(txt);
+		}
+		
+		function betterParseInt(txt){
+			txt += '';
+			var dl = txt.length;
+			var number = '';
+			for(i = 0; i < dl-1; i++){
+				switch(txt[i]){
+					case '0':
+					case '1':
+					case '2':
+					case '3':
+					case '4':
+					case '5':
+					case '6':
+					case '7':
+					case '8':
+					case '9':
+						number += txt[i];
+						break;
+					default: continue;
+						break;
+				}
+			}
+			parseInt(number);
+			return number;
 		}
 	</script>
 	
