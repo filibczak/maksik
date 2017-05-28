@@ -1,7 +1,7 @@
 # Maksik
 url: http://37.8.214.76/~d14.kukiz.krzysztof/
 
-## ToDo
+## budżet domowy
 - [ ] Przychody
 	- [ ] Przychud 1
 	- [ ] Przychud 2
@@ -15,4 +15,6 @@ url: http://37.8.214.76/~d14.kukiz.krzysztof/
 	- [ ] Ubezbieczenie
 	- [ ] Dodaj własne
 	- [ ] Wykres
-		- [ ] miesiędzne wydatki
+		- [ ] ruznica przychodów, wydatków
+		- [ ] Miesiędzne wydatki
+		- [ ] Wydatki wtg kat.
