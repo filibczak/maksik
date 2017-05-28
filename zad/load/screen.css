@@ -1,0 +1,24 @@
+body{
+    background-color: lightgrey;
+    color: grey;
+}
+#box{
+    position: absolute;
+    top: 0;
+    left: ;
+    height: 100%;
+    width: 100%;
+}
+#click{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    height: 50px;
+    width: 50px;
+    color: #333;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+#click:hover{
+    color: #000;
+}

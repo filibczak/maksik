@@ -1,0 +1,14 @@
+gr. a.
+1. odczytaj plik 3i_programowanieAplikacji_pliki_grA.txt i wyœwietl go w postaci tabeli
+2. zapisz do pliku polscy.txt zawodników polskich
+3. podaj nazwisko zawodnika z najwieksz¹ iloœci¹ punktów
+4. utwórz zestawienie punktowe dla poszczególnych krajów
+5. stwórz formularz dodaj¹cy dane nowego zawodnika
+
+
+gr. b.
+1. odczytaj plik 3i_programowanieAplikacji_pliki_grB.txt
+2. zapisz w pliku minimum.txt nr rej auta, które dosta³o najmniejsze odszkodowanie za wypadek
+3. wyswietl w postaci listy wypunktowanej numery rejestracyjne aut maj¹cych wypadek w kwietniu
+4. utwórz zestawienie tabelaryczne wypadków dla poszczególnych lat
+5. stwórz formularz pozwalaj¹cy sprawdziæ czy samochód o podanym nr rejestracyjnym mia³ wypadek

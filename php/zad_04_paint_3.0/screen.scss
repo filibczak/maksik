@@ -1,0 +1,207 @@
+@mixin transition($val) {
+  transition: $val;
+  -moz-transition: $val;
+  -webkit-transition: $val;
+  -ms-transition: $val;
+}
+
+
+$gui-width: 1200px;
+$gui-height: 600px;
+$tools-width: 250px;
+$color-width: 55px;
+$color-width-hover: $color-width + 10px;
+
+$shadow: 0 0 20px -4px black;
+
+$text-color: #222;
+
+header, nav, section, article, aside, fotter{
+	display: block;
+}
+body{
+	background-color: #fff;
+	background-image: url(ignasi_pattern_s.png)/*========================================================
+ This pattern is downloaded from www.subtlepatterns.com 
+ If you need more, that's where to get'em.
+ ========================================================*/;
+}
+
+//	menu
+#which-pic{
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height:	80px;
+	background-color: darkgreen;
+	box-shadow: $shadow;
+	
+	.pic{
+		margin-left: 15px;
+		margin-top: 15px;
+		display: inline-block;
+		width: 200px;
+		height: 50px;
+		line-height: 150%;
+		box-shadow: 0 0 10px -4px black;
+		color: $text-color;
+		background-color: darkgreen;
+		@include transition(all .6s ease);
+		cursor: pointer;
+		text-align: center;
+		font-size: 32px;
+		text-decoration: none;
+		&:hover{
+			box-shadow: 0 0 10px -1px black;
+			background-color: green;
+		}
+	}
+	.checked{
+		cursor: pointer;
+		text-align: center;
+		font-size: 32px;
+			box-shadow: 0 0 10px -1px black;
+	}
+}
+
+//	draw panel
+#gui{
+	position: absolute;
+	top: 150px;
+	left: calc(100%/2 -  #{$gui-width}/2);
+	width: $gui-width;
+	height: $gui-height;
+	& > #draw{
+		float: left;
+		width: $gui-width - 270px;
+		height: $gui-height;
+		box-shadow: $shadow;
+		background-color: #fff;
+		.px{
+			width: 10px;
+			height: 10px;
+			display: block;
+			float: left;
+		}
+	}
+	//right aside
+	& > #tools{
+		float: right;
+		width: $tools-width;
+		& > section{
+			box-shadow: $shadow;
+			padding: 15px;
+			background-color: #aaa;
+			font-weight: 700;
+			color: $text-color;
+			margin-bottom: 15px;
+		}
+		
+		//colors
+		& > #colors{
+			& > #active-color{
+				& > input{
+					cursor: pointer;
+					padding: 0;
+					margin: 0;
+					outline: 0;
+					border: 0;
+					width: 20px;
+					height: 20px;
+					box-shadow: 0 0 10px -3px;
+					-webkit-appearance: none;
+
+					&::-webkit-color-swatch-wrapper{
+						padding: 0;
+					}
+					&::-webkit-color-swatch{
+						border: none;
+					}
+				}
+				& > label{
+					position: relative;
+					vertical-align: 5px;
+				}
+			}
+			& > #last-colors{
+				margin-top: 15px;
+
+				& > span{
+					display: block;
+					margin-bottom: 44px;
+				}
+				
+				& > .color{
+					position: relative;
+					display: inline-block;
+					top: 0;
+					left: 0;
+					width: $color-width;
+					height: $color-width;
+					border-collapse: collapse;
+					cursor: pointer;
+					z-index: 0;
+					text-align: center;
+					@include transition(all .2s ease);
+					&:hover{
+						box-shadow: 0 0 40px 1px black;
+						z-index: 10;
+						top: -5px;
+						left: -5px;
+						width: $color-width-hover;
+						height: $color-width-hover;
+						margin-right: -10px;
+						margin-bottom: -10px;
+						& > span{
+							display: inline-block;
+							vertical-align: -23px;
+							font-size: 16px;
+						}
+					}
+					& > span{
+						display: inline-block;
+						vertical-align: -18px;
+						@include transition(all .2s ease);
+						font-size: 12px;
+					}
+				}
+			}
+			#restCookies{
+				color: #960000;
+				cursor: pointer;
+				font-size: 20px;
+				&:hover{
+					color: #E30000;
+				}
+			}
+		}
+		//save
+		& > #save{
+			& > button{
+				background-color: darkgreen !important;
+				@include transition(all .2s ease);
+				&:hover{
+					background-color: green !important;
+				}
+			}
+		}
+		button{
+			border: 0;
+			outline: 0;
+			margin: 0;
+			padding: 0;
+			width: 220px;
+			height: 50px;
+			cursor: pointer;
+			font-size: 20px;
+			letter-spacing: 5px;
+			font-weight: 900;
+			background-color: grey;
+			@include transition(all .2s ease);
+			&:hover{
+				background-color: lightgrey;
+			}
+		}
+		
+	}
+}

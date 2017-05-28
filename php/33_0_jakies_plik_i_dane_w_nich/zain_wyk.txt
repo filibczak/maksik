@@ -1,0 +1,281 @@
+Id_k	Zainteresowania	Wyksztalcenie
+14	polityka	średnie
+254	muzyka	wyższe
+201	języki	wyższe
+147	gry komputerowe	podstawowe
+232	języki	wyższe
+74	matematyka	wyższe
+165	turystyka	wyższe
+56	sport	podstawowe
+219	informatyka	wyższe
+52	turystyka	wyższe
+128	języki	średnie
+280	matematyka	wyższe
+126	muzyka	wyższe
+143	gry komputerowe	średnie
+214	informatyka	podstawowe
+130	gry komputerowe	podstawowe
+223	turystyka	wyższe
+207	matematyka	wyższe
+51	informatyka	średnie
+276	sport	podstawowe
+104	matematyka	wyższe
+279	matematyka	wyższe
+196	turystyka	średnie
+119	polityka	wyższe
+22	muzyka	średnie
+16	turystyka	wyższe
+77	turystyka	wyższe
+148	turystyka	wyższe
+101	sport	podstawowe
+149	języki	podstawowe
+203	turystyka	średnie
+211	sport	podstawowe
+97	matematyka	średnie
+114	turystyka	podstawowe
+145	języki	średnie
+75	polityka	podstawowe
+260	sport	podstawowe
+234	języki	podstawowe
+250	informatyka	wyższe
+175	gry komputerowe	podstawowe
+277	polityka	wyższe
+218	polityka	podstawowe
+139	turystyka	podstawowe
+23	informatyka	wyższe
+184	turystyka	średnie
+156	turystyka	średnie
+253	informatyka	średnie
+30	informatyka	podstawowe
+136	języki	średnie
+182	muzyka	średnie
+9	polityka	podstawowe
+173	języki	średnie
+84	muzyka	wyższe
+19	turystyka	wyższe
+243	muzyka	wyższe
+264	polityka	średnie
+103	polityka	podstawowe
+161	turystyka	wyższe
+235	informatyka	wyższe
+258	sport	podstawowe
+85	gry komputerowe	podstawowe
+237	turystyka	wyższe
+57	matematyka	średnie
+47	matematyka	średnie
+127	gry komputerowe	podstawowe
+99	języki	średnie
+191	muzyka	podstawowe
+206	gry komputerowe	średnie
+110	języki	podstawowe
+113	polityka	wyższe
+53	języki	średnie
+32	języki	wyższe
+33	turystyka	podstawowe
+210	muzyka	wyższe
+91	sport	wyższe
+112	muzyka	wyższe
+5	turystyka	wyższe
+262	polityka	średnie
+46	informatyka	średnie
+105	języki	średnie
+178	gry komputerowe	średnie
+123	turystyka	wyższe
+199	turystyka	podstawowe
+70	języki	podstawowe
+67	muzyka	wyższe
+153	muzyka	podstawowe
+190	języki	wyższe
+76	matematyka	średnie
+146	muzyka	podstawowe
+244	sport	wyższe
+41	sport	podstawowe
+205	informatyka	podstawowe
+198	muzyka	średnie
+124	języki	wyższe
+204	języki	wyższe
+241	polityka	wyższe
+88	gry komputerowe	średnie
+132	języki	średnie
+6	muzyka	wyższe
+212	matematyka	średnie
+272	sport	średnie
+179	gry komputerowe	wyższe
+64	sport	podstawowe
+60	polityka	podstawowe
+185	języki	średnie
+202	muzyka	podstawowe
+171	muzyka	średnie
+58	polityka	podstawowe
+39	muzyka	wyższe
+188	gry komputerowe	podstawowe
+168	języki	średnie
+208	sport	podstawowe
+160	języki	podstawowe
+170	języki	wyższe
+100	turystyka	podstawowe
+36	informatyka	podstawowe
+251	matematyka	wyższe
+62	matematyka	podstawowe
+95	turystyka	podstawowe
+108	muzyka	średnie
+15	informatyka	średnie
+166	języki	średnie
+186	gry komputerowe	podstawowe
+18	matematyka	podstawowe
+40	sport	podstawowe
+54	sport	średnie
+152	języki	średnie
+82	muzyka	podstawowe
+239	muzyka	średnie
+4	sport	średnie
+224	języki	wyższe
+150	muzyka	średnie
+86	informatyka	średnie
+255	informatyka	wyższe
+249	muzyka	średnie
+120	turystyka	średnie
+44	języki	podstawowe
+174	muzyka	średnie
+138	gry komputerowe	średnie
+159	gry komputerowe	podstawowe
+66	matematyka	wyższe
+71	turystyka	wyższe
+17	informatyka	wyższe
+195	muzyka	średnie
+238	muzyka	średnie
+162	gry komputerowe	średnie
+92	turystyka	średnie
+261	matematyka	średnie
+134	gry komputerowe	średnie
+222	matematyka	średnie
+27	gry komputerowe	wyższe
+269	gry komputerowe	wyższe
+35	muzyka	średnie
+213	polityka	wyższe
+50	muzyka	wyższe
+61	matematyka	wyższe
+257	języki	podstawowe
+90	muzyka	wyższe
+233	informatyka	wyższe
+275	informatyka	średnie
+197	języki	podstawowe
+29	informatyka	średnie
+87	polityka	średnie
+81	języki	podstawowe
+144	turystyka	podstawowe
+1	informatyka	wyższe
+55	gry komputerowe	średnie
+187	muzyka	średnie
+72	języki	średnie
+193	turystyka	średnie
+252	informatyka	średnie
+122	turystyka	podstawowe
+227	informatyka	średnie
+265	matematyka	średnie
+164	polityka	podstawowe
+68	sport	średnie
+121	języki	wyższe
+11	turystyka	podstawowe
+240	informatyka	średnie
+37	polityka	podstawowe
+226	muzyka	wyższe
+140	języki	podstawowe
+259	gry komputerowe	wyższe
+157	języki	podstawowe
+209	turystyka	średnie
+8	matematyka	wyższe
+7	sport	podstawowe
+45	muzyka	podstawowe
+117	gry komputerowe	średnie
+25	polityka	podstawowe
+133	gry komputerowe	podstawowe
+236	gry komputerowe	podstawowe
+137	muzyka	podstawowe
+256	turystyka	średnie
+172	gry komputerowe	podstawowe
+183	gry komputerowe	podstawowe
+268	sport	wyższe
+217	polityka	podstawowe
+200	języki	średnie
+63	języki	podstawowe
+194	języki	podstawowe
+42	sport	wyższe
+10	informatyka	wyższe
+118	muzyka	podstawowe
+83	gry komputerowe	wyższe
+270	matematyka	średnie
+129	gry komputerowe	podstawowe
+180	turystyka	podstawowe
+229	polityka	wyższe
+247	polityka	podstawowe
+248	języki	średnie
+94	polityka	średnie
+12	polityka	podstawowe
+78	matematyka	podstawowe
+111	gry komputerowe	podstawowe
+115	języki	średnie
+169	turystyka	podstawowe
+13	polityka	podstawowe
+231	gry komputerowe	średnie
+96	polityka	podstawowe
+155	języki	wyższe
+151	turystyka	podstawowe
+225	matematyka	podstawowe
+220	turystyka	wyższe
+189	turystyka	średnie
+131	turystyka	podstawowe
+242	turystyka	średnie
+177	języki	podstawowe
+98	gry komputerowe	wyższe
+102	gry komputerowe	podstawowe
+141	gry komputerowe	wyższe
+215	turystyka	średnie
+263	informatyka	średnie
+73	matematyka	podstawowe
+107	języki	średnie
+28	języki	wyższe
+20	matematyka	średnie
+267	języki	podstawowe
+79	gry komputerowe	wyższe
+274	matematyka	wyższe
+80	muzyka	podstawowe
+65	gry komputerowe	podstawowe
+154	turystyka	podstawowe
+142	muzyka	podstawowe
+43	polityka	podstawowe
+271	muzyka	podstawowe
+59	informatyka	średnie
+109	gry komputerowe	podstawowe
+135	turystyka	podstawowe
+31	języki	podstawowe
+24	informatyka	wyższe
+230	sport	średnie
+216	polityka	podstawowe
+163	muzyka	podstawowe
+38	turystyka	podstawowe
+167	turystyka	średnie
+34	muzyka	średnie
+106	sport	wyższe
+116	turystyka	wyższe
+246	sport	wyższe
+125	języki	podstawowe
+3	matematyka	średnie
+221	informatyka	średnie
+69	sport	średnie
+181	języki	wyższe
+245	sport	podstawowe
+278	polityka	średnie
+192	gry komputerowe	wyższe
+273	polityka	wyższe
+176	turystyka	średnie
+2	gry komputerowe	wyższe
+48	informatyka	podstawowe
+266	matematyka	podstawowe
+228	informatyka	wyższe
+21	języki	średnie
+158	muzyka	średnie
+93	muzyka	podstawowe
+49	informatyka	wyższe
+26	sport	średnie
+89	sport	wyższe

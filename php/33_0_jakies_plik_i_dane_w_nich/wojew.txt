@@ -1,0 +1,17 @@
+Wojewodztwo	Symbol_woj
+Dolnośląskie	D 
+Kujawsko-Pomorskie	C 
+Lubelskie	L 
+Lubuskie	F 
+Łódzkie	E 
+Małopolskie	K 
+Mazowieckie	W 
+Opolskie	O 
+Podkarpackie	R 
+Podlaskie	B 
+Pomorskie	G 
+Śląskie	S 
+Świętokrzyskie	T 
+Warmińsko-Mazurskie	N 
+Wielkopolskie	P 
+Zachodniopomorskie	Z 

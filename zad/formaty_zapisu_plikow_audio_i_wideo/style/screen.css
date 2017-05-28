@@ -1,0 +1,141 @@
+@import 'https://fonts.googleapis.com/css?family=Baloo+Bhaina&subset=latin-ext';
+/* style: http://paletton.com/#uid=13B0u0kllllihD3jOs0mSeFop7+ */
+a {
+  color: none;
+  text-decoration: none;
+}
+body {
+  background-color: #2b4b6f;
+  color: #5a89bd;
+  font-size: 150%;
+  font-family: 'Baloo Bhaina', cursive;
+  line-height: 130%;
+}
+::selection {
+  background-color: #3f6692;
+}
+p {
+  text-align: justify;
+}
+/*Do gury*/
+#up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  height: 80px;
+  width: 80px;
+  color: #2b4b6f;
+  background-color: #5a89bd;
+  font-size: 57px;
+  line-height: 157%;
+  cursor: pointer;
+  z-index: 111;
+}
+#up:hover {
+  color: #4070a6;
+  background-color: #91b0d3;
+}
+/*Strona tytulowa*/
+#strona_tytul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0c1a2a;
+  z-index: 100;
+}
+#strona_tytul h1 {
+  text-align: center;
+  font-size: 100px;
+}
+#strona_tytul p {
+  text-align: center;
+}
+.ico_strona_tytul {
+  position: absolute;
+  top: calc(50% - 50px);
+  color: #5a89bd;
+  font-size: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+.ico_strona_tytul:hover {
+  color: #91b0d3;
+}
+.icon-music {
+  left: calc(50% - 140px);
+}
+.icon-video {
+  left: calc(50%);
+}
+/*menu*/
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background-color: #0c1a2a;
+  box-shadow: 0 0 20px black;
+  z-index: 200;
+}
+.ico_nav {
+  font-size: 35px;
+  margin-top: 15px;
+  float: left;
+  cursor: pointer;
+}
+.ico_nav:hover {
+  color: #91b0d3;
+}
+/*content strony*/
+#strona_content {
+  position: absolute;
+  top: calc(100%);
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  /*background-image: url(../img/maxresdefault.png);*/
+  background-attachment: fixed;
+  background-size: 100%;
+}
+#strona_content article {
+  z-index: 90;
+  margin-top: 450px;
+  width: calc(100% - 300px*2);
+  padding: 50px 300px;
+  background-color: #0c1a2a;
+}
+#strona_content article h1 {
+  text-align: center;
+  font-size: 50px;
+}
+.podswietlenie,
+h2 {
+  color: #91b0d3;
+  font-weight: 900;
+}
+/*Stopka*/
+#stopka {
+  margin-top: 450px;
+  width: calc(100% - 50px*2);
+  height: 150px;
+  padding: 50px;
+  background-color: #0c1a2a;
+  font-size: 100%;
+  line-height: 50%;
+}
+#stopka section {
+  float: left;
+  margin-right: 50px;
+}
+#stopka section a {
+  color: #5a89bd;
+}
+#stopka section a:hover {
+  color: #91b0d3;
+}
+#stopka section li {
+  line-height: 100%;
+}

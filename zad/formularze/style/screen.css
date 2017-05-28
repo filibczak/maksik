@@ -1,0 +1,58 @@
+body{
+	background-color: #333;
+	color: white;
+	font-size: 16px;	
+}
+::selection{
+	background-color: lightgrey;
+}
+
+#box{
+	position: absolute;
+	top: 150px;
+	left: calc(100%/2 - 350px/2 - 50px);
+	/*min-height: 400px;*/
+	width: 350px;
+	padding: 50px;
+	margin-bottom: 50px;
+	
+	outline: 2px white solid;	
+}
+
+#wiek{
+	text-align: right;	
+}
+
+h1{
+	text-align: center;	
+}
+
+input,
+textarea{
+	background-color: #333;
+	
+	border: 2px white solid;
+	border-radius: 3px;
+	padding: 5px;
+	color: white;
+}
+
+input:focus,
+textarea:focus{
+	/*outline: 2px solid lightgreen;*/
+	outline: none;
+	box-shadow: 0 0 10px lightgreen;
+}
+
+input[type="radio"],
+input[type="checkbox"],
+input[type="reset"],
+input[type="submit"]{
+	cursor: pointer;	
+}
+
+input[disabled="disabled"]{
+	border-color: #555;
+	color: #555;
+	cursor: auto;
+}

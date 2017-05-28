@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+    <meta charset="utf-8">
+<!--<meta name="Author" content="kkukiz">
+    <meta name="Keywords" content="kukiz, krzysztof kukiz, Qkiz, przykładowa strona, strona startowa, html, html5, css, css3, js, javascript, jq, jQuery">
+    <meta name="Description" content="Moja strona startowa dla portalu maksik.glt.pl">-->
+    <title id="title">Formaty zapisu Audio i Wideo</title>
+	<link rel="icon" href="img/nuta.ico">
+    
+    <link rel="stylesheet" type="text/css" href="style/screen.css">
+    <link rel="stylesheet" type="text/css" href="style/fontello.css">
+    
+    <script src="script/jquery.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <script src="script/main.js"></script>
+    
+</head>
+<body>
+<div id="box">
+	<div id="strona_tytul">
+    
+        <h1>Formaty zapisu Audio i Wideo</h1>
+        <p>Wybierz:</p>
+        
+        <div class="article_music_a icon-music ico_strona_tytul"></div>
+        <div class="article_video_a icon-video ico_strona_tytul"></div>
+
+	</div>
+	<div id="up" class="up icon-up-open"></div>
+    <nav id="menu">
+        <div class="up icon-home ico_nav"></div>
+        <div class="article_music_a icon-music ico_nav"></div>
+        <div class="article_video_a icon-video ico_nav"></div>
+    </nav>
+    <div id="strona_content">
+    	<!--<img id="przerywnik1" src="img/maxresdefault.png" alt="">-->
+    	<article id="article_music">
+        	<h1><i class="icon-music"></i>Pliki Zapisu Audio<i class="icon-music"></i></h1>
+        	<section>
+            	<h2>Rodzaje plików stosowanych w audio</h2>
+            	<p>Rozróżniamy trzy rodzaje plików stosowanych w audio:</p>
+            	<ul>
+                	<li>
+                    	<p><span class="podswietlenie">Pliki bez kompresji. </span>Zasadniczo w dziedzinie cyfrowej takie pliki to "oryginały". Zabierają one najwięcej miejsca. Ich jakość jest określona przez częstotliwość próbkowania i rozdzielczość bitową. Zawierają one dane w takiej samej postaci jaka jest stosowana na płytach CD (tu częstotliwość próbkowania wynosi 44,1kHz a rozdzielczość 16 bitów). Głównym przedstawicielem plików tego rodzaju jest WAVE (WAV).</p>
+                    </li>
+                	<li>
+                    	<p><span class="podswietlenie">Pliki z kompresją bezstratną. </span>Te pliki zawierają dokładnie taką samą informację jak pliki bez kompresji, ale dzięki inteligentnym technikom kodowania zajmują mniej miejsca na nośniku. Oszczędność jest inna w każdym przypadku i zależy ona od wielu czynników, ale w przybliżeniu możemy przyjąć, że zajmują one połowę miejsca potrzebnego dla plików bez kompresji. W tej grupie jest wiele formatów takich jak: FLAC, WMA Lossless, Apple Lossless, Monkeys Audio i inne.</p>
+                    </li>
+                	<li>
+                    	<p><span class="podswietlenie">Pliki z kompresją stratną. </span>Te pliki nie zawierają pełnej oryginalnej informacji. Algorytmy kodujące używane do tworzenia tego typu plików odrzucają część informacji (starają się to zrobić w sposób jak najmniej słyszalny dla ludzkiego ucha) aby jeszcze bardziej zmniejszyć wielkość plików. Jest wiele możliwych wariantów kompresji do wyboru. Im mniejszy plik, tym niższa jest jakość. Pliki wykorzystywane do zapisu muzyki są typowo od 4 do 11 razy mniejsze niż oryginały bez kompresji. W tej grupie jest wiele formatów, takich jak MP3, Ogg Vorbis, WMA, AAC i tak dalej.</p>
+                    </li>
+                </ul>
+			</section>
+            <section>
+            	<h2>Zastosowania plików bez kompresji</h2>
+                <p>Pierwszy wariant (pliki bez kompresji) jest dość rozrzutny. Możecie więc pomyśleć, żeby od razu spisać go na straty. Faktycznie korzystanie z nieskompresowanych plików WAV (WAVE) do archiwizacji nagrań muzycznych nie ma większego sensu. Pliki takie mają jednak kilka istotnych zalet. Są bardzo powszechnie obsługiwane. Nie tylko programy do odtwarzania muzyki, nie tylko sprzętowe odtwarzacze obsługują pliki WAV. Obsługa plików WAV jest nawet wbudowana w głównych systemach operacyjnych bez żadnego dodatkowego oprogramowania. Chociaż pliki WAV zajmują dużo miejsca, to bardzo łatwo można je obrabiać, nagrywać i odtwarzać. Jeśli będziecie wykonywać samodzielnie jakieś nagrania, na przykład z mikrofonu czy ze źródła analogowego, wykorzystanie WAV będzie całkiem naturalne i rozsądne. Pliki WAV są też dobre kiedy potrzeba wykonać montaż. Chociaż pliki WAV nie są odpowiednie do archiwizacji, są przydatne do tymczasowego przechowywania nagrań audio, z którymi pracujemy.
+
+</p>
+            </section>
+            <section>
+            	<h2>Formaty zapisu plików audio</h2>
+                <ul>
+                	<li>
+                    	<p><span class="podswietlenie">Foramt WAVE, </span>najprostszy standardowy format plikucdźwiękowego. Dźwięk zapisany w tej formie nie jest poddany kompresji. Pliki te mają zwykle duży rozmiar , lecz nie tracą na jakości. Format WAVE stworzyły wspólnie firmy Microsoft i IBM dla komputerów PC z systemem Windows, lecz te pliki mogą byćcodtwarzane i edytowane przy użyciu innych oprogramowań.</p>
+                    </li>
+                	<li>
+                    	<p><span class="podswietlenie">Format MP3, </span>najpopularniejszy format skompresowanych plików
+dźwiękowych. Formalnie plik nosi nazwę MPEG-1 Audio Layer 3. Ten format stał się najpowszechniejszym formatem Internetu i odtwarzaczy MP3.
+</p>
+                    </li>
+                	<li>
+                    	<p><span class="podswietlenie">Format WMA (Windows Media Audio), </span>powodem stworzenia WMA mogły być konflikty patentowe z Fraunhofer Institute - twórcą formatu MP3, dotyczące dołączania kodeka MP3 do systemu Windows. Według Microsoftu WMA zapewnia jakość dźwięku znacznie lepszą niż MP3, a początkowo firma z Redmond twierdziła nawet, że WMA dorównuje jakości płyty CD przy bitrate równym 64 kb/s.</p>
+                    </li>
+                	<li>
+                    	<p><span class="podswietlenie">CD-Audio</span> to standard cyfrowego zapisu dźwięku na płycie kompaktowej, wykorzystujący do tego celu kodowanie PCM o częstotliwości prób kowania 44,1 kHz i rozdzielczości  16 bitów na próbkę</p>
+                    </li>
+                </ul>
+            </section>
+            
+        </article>
+        
+    	<article id="article_video">
+        	<h1><i class="icon-video"></i>Pliki Zapisu Wideo<i class="icon-video"></i></h1>
+            <section>
+            	<h2>Formaty plików</h2>
+                <ul>
+                	<li>
+                    	<p><span class="podswietlenie">AVI (Audio Video Interleave) </span>- jeden z najstarszych i najpopularniejszych formatów
+plików wideo. Głównym zadaniem tego formatu jest łączenie danych audio-wideo
+w jednym pliku. Nie określa on konkretnej metody kompresji. Pozwala też
+na swobodny dobór kodeków. To kontener danych audiowizualnych. Został
+wprowadzony w roku 1992 przez firmę Microsoft, jako element strategii
+przystosowania systemu Windows do obsługi multimediów, stanowiący częśd
+technologii Video for Windows. Jest odmianą formatu RIFF. Od formatu RIFF
+zapożyczono sposób zapisywania danych poprzez ich podział na części.</p>
+                    </li>
+                	<li>
+                    	<p><span class="podswietlenie">MPEG (Moving Picture Experts Group)</span> - grupa powszechnie stosowanych formatów
+zapisu danych, zawierających obraz i dźwięk. Wśród tych standardów znajdują się
+m.in. najpopularniejszy format kompresji dźwięku, stosowany w komputerach
+osobistych i odtwarzaczach przenośnych MP3 oraz opracowany przez grupę
+niezależnych ekspertów standard używany do zapisu filmów Video CD, DVD
+i transmisji telewizji cyfrowej (MPEG 2), czy wprowadzony ostatnio MPEG-4,
+mający zastosowanie w filmach wideo wysokiej jakości, np. na Blu-ray Disc. Ogólną
+cechą w</p>
+                    </li>
+                	<li>
+                    	<p><span class="podswietlenie">MPEG-4 </span>- zawiera dane wideo zakodowane w standardzie MPEG-4 oraz dane audio
+zakodowane w standardzie AAC (Advanced Audio Coding). Zaletą tego formatu jest
+uzyskanie plików o znacznie mniejszych rozmiarów przy jednoczesnym zachowaniu
+wysokiej jakości obrazu i dźwięku. Główne zastosowania MPEG-4 to media
+strumieniowe w sieci Web, dystrybucja CD, wideokonferencje i telewizja oraz kamery
+cyfrowe. MPEG-4 jest jak na razie najlepszym formatem jeśli chodzi o stosunek
+jakości obrazu do wielkości pliku wideo.</p>
+                    </li>
+                	<li>
+                    	<p><span class="podswietlenie">VideoCD (VCD) </span>- służy do zapisu filmów na płytach CD-R/CD-RW z jakością zbliżoną
+do VHS. Dźwięk ma 2 kanały mono lub 1 stereo. Dodatkowo film może zawierad
+do 4 zestawów napisów, może t</p>
+                    </li>
+                	<li>
+                    	<p><span class="podswietlenie">DVD (DVD-video) </span>- standard wykorzystywany do zapisywania filmów na płytach DVD.
+Dźwięk przestrzenny jest zapisywany w systemie Dolby digital 5.1. Na płycie DVD
+można umieścid do 8 ścieżek audio (48-96 kHz), do 9 ścieżek video oraz 32 ścieżki
+z napisami.</p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+            	<h2>Kompresja</h2>
+                <p>Polega na zapamiętywaniu nie tyle kolejnych klatek filmu, ile raczej różnic między nimi. W większości filmów kolejne klatki zmieniają się nieznacznie. W przypadku scen, w których więcej się dzieje, różnice będą wyraźniejsze, niemniej ponieważ rozpatrujemy różnice między klatkami odległymi w czasie o 1/30 sekundy, to metoda kompresji polegająca na opisywaniu różnic zamiast całych klatek wciąż się sprawdzi.</p>
+            </section>
+            <section>
+            	<h2>Kompresja wideo - podstawowe pojęcia</h2>
+                <ul>
+                	<li>
+                    	<p><span class="podswietlenie">Przepływność </span>- liczba danych na sekundę pliku wideo. Jest to podstawowa wielkość opisująca zarówno jakość wideo, jak i rozmiar pliku. Im wyższa przepływność, tym lepsza jakość, ale i większy plik.</p>
+                    </li>
+                	<li>
+                    	<p><span class="podswietlenie">Rozdzielczość </span>- jest to liczba pikseli obrazu w poziomie na liczbę pikseli obrazu w pionie, np.: 640x480 lub 800x600. Im większa rozdzielczość, tym lepsza jakość obrazu, ale i większy plik.</p>
+                    </li>
+                	<li>
+                    	<p><span class="podswietlenie">Media strumieniowe </span>- technika transmisji skompresowanego wideo w internecie. Istotą transmisji strumieniowej jest przesyłanie dużych obiektów (filmów) w porcjach, które są aktualnie potrzebne. Przykładowo: aby zacząć wyświetlać film, wystarczy pobrać kilka, kilkanaście pierwszych sekund. W trakcie odtwarzania pobierane są kolejne fragmenty.</p>
+                    </li>
+                </ul>
+            </section>
+        </article>
+        
+        <footer id="stopka">
+        	<section>
+            	Linki audio: 
+            	<ul>
+                	<li><a href="http://www.hifi.pl/porady/pliki-formaty.php">hifi.pl</a></li>
+                	<li><a href="http://www.andrzej.edu.pl/szkolne/multimedia_praktyka/Formaty-plikow-audio2.pdf">andrzej.edu.pl</a></li>
+                </ul>
+            </section>
+        	<section>
+            	Linki Wideo: 
+            	<ul>
+                	<li><a href="http://www.gim26.edu.pl/informatyczna/materialy/formaty_video.pdf">gim26.edu.pl</a></li>
+                	<li><a href="http://www.zso14.edu.pl/nadhi/DSI3/formaty_wideo.pdf">zso14.edu.pl</a></li>
+                </ul>
+            </section>
+        </footer>
+    </div>
+</div>
+</body>
+</html>

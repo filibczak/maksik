@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wykresy>
+
+	<wykres>
+		<dane><data>2012-01-01</data><wartosc>102</wartosc></dane>
+		<dane><data>2012-01-02</data><wartosc>104</wartosc></dane>
+		<dane><data>2012-01-03</data><wartosc>105</wartosc></dane>
+		<dane><data>2012-01-04</data><wartosc>105</wartosc></dane>
+		<dane><data>2012-01-05</data><wartosc>106</wartosc></dane>
+		<dane><data>2012-01-06</data><wartosc>108</wartosc></dane>
+		<dane><data>2012-01-07</data><wartosc>109</wartosc></dane>
+		<dane><data>2012-01-08</data><wartosc>110</wartosc></dane>
+		<dane><data>2012-01-09</data><wartosc>111</wartosc></dane>
+		<dane><data>2012-01-10</data><wartosc>112</wartosc></dane>
+		<dane><data>2012-01-11</data><wartosc>113</wartosc></dane>
+		<dane><data>2012-01-12</data><wartosc>124</wartosc></dane>
+		<dane><data>2012-01-13</data><wartosc>127</wartosc></dane>
+		<dane><data>2012-01-14</data><wartosc>134</wartosc></dane>
+		<dane><data>2012-01-15</data><wartosc>130</wartosc></dane>
+		<dane><data>2012-01-16</data><wartosc>118</wartosc></dane>
+		<dane><data>2012-01-17</data><wartosc>106</wartosc></dane>
+		<dane><data>2012-01-18</data><wartosc>104</wartosc></dane>
+		<dane><data>2012-01-19</data><wartosc>102</wartosc></dane>
+		<dane><data>2012-01-20</data><wartosc>101</wartosc></dane>
+		<dane><data>2012-01-21</data><wartosc>99</wartosc></dane>
+		<dane><data>2012-01-22</data><wartosc>97</wartosc></dane>
+		<dane><data>2012-01-23</data><wartosc>95</wartosc></dane>
+		<dane><data>2012-01-24</data><wartosc>94</wartosc></dane>
+		<dane><data>2012-01-25</data><wartosc>127</wartosc></dane>
+		<dane><data>2012-01-26</data><wartosc>128</wartosc></dane>
+		<dane><data>2012-01-27</data><wartosc>129</wartosc></dane>
+		<dane><data>2012-01-28</data><wartosc>130</wartosc></dane>
+		<dane><data>2012-01-29</data><wartosc>131</wartosc></dane>
+		<dane><data>2012-01-30</data><wartosc>132</wartosc></dane>
+		<dane><data>2012-01-31</data><wartosc>133</wartosc></dane>
+	</wykres>
+	
+	<wykres>
+		<dane>
+			<kierunek>North</kierunek>
+			<r2001>80</r2001>
+			<r2002>88</r2002>
+		</dane>
+		<dane>
+			<kierunek>South</kierunek>
+			<r2001>70</r2001>
+			<r2002>65</r2002>
+		</dane>
+		<dane>
+			<kierunek>East</kierunek>
+			<r2001>120</r2001>
+			<r2002>100</r2002>
+		</dane>
+		<dane>
+			<kierunek>West</kierunek>
+			<r2001>95</r2001>
+			<r2002>94</r2002>
+		</dane>
+	</wykres>
+	
+	<wykres>
+		<dane>
+			<produkt>Produkt 1</produkt>
+			<ilosc>12</ilosc>
+		</dane>
+		<dane>
+			<produkt>Produkt 2</produkt>
+			<ilosc>23</ilosc>
+		</dane>
+		<dane>
+			<produkt>Produkt 3</produkt>
+			<ilosc>32</ilosc>
+		</dane>
+		<dane>
+			<produkt>Produkt 4</produkt>
+			<ilosc>33</ilosc>
+		</dane>
+	</wykres>
+	
+</wykresy>

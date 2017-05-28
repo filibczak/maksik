@@ -1,0 +1,164 @@
+
+/* style: http://paletton.com/#uid=13B0u0kllllihD3jOs0mSeFop7+ */;
+
+
+@textColor: #5A89BD;
+@bg0Color: #0C1A2A;
+@bg1Color: #2B4B6F;
+@bg2Color: #3F6692;
+
+
+a{
+	color: none;
+	text-decoration: none;
+}
+@import 'https://fonts.googleapis.com/css?family=Baloo+Bhaina&subset=latin-ext';
+body{
+	background-color: @bg1Color;
+	color: @textColor;
+	font-size: 150%;
+	font-family: 'Baloo Bhaina', cursive;
+	line-height: 130%;
+}
+::selection {
+  background-color: @bg2Color;
+}
+p{
+	text-align: justify;
+}
+/*Do gury*/
+#up{
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	height: 80px;
+	width: 80px;
+
+	color: @bg1Color;
+	background-color: @textColor;
+	font-size: 57px;
+	line-height: 157%;
+	cursor: pointer;
+
+	z-index: 111;
+
+	&:hover{
+		color: lighten(@bg1Color,15%);
+		background-color: lighten(@textColor,15%);
+	}
+}
+/*Strona tytulowa*/
+#strona_tytul{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+
+	background-color: @bg0Color;
+	z-index: 100;
+
+	h1{
+		text-align: center;
+		font-size: 100px;
+	}
+	p{
+		text-align: center;
+	}
+}
+@wielkosc_ico_strona_tytul: 100px;
+.ico_strona_tytul{
+	position: absolute;
+	top: calc(~'50%' - @wielkosc_ico_strona_tytul/2);
+	color: @textColor;
+	font-size: @wielkosc_ico_strona_tytul;
+	text-align: center;
+	cursor: pointer;
+
+	&:hover{
+		color: lighten(@textColor, 15%);
+	}
+}
+.icon-music{
+	left: calc(~'50%' - 140px);
+}
+.icon-video{
+	left: calc(~'50%');
+}
+
+/*menu*/
+#menu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 65px;
+	background-color: @bg0Color;
+	box-shadow: 0 0 20px black;
+	z-index: 200;
+}
+.ico_nav{
+	font-size: 35px;
+	margin-top: 15px;
+	float: left;
+	cursor: pointer;
+
+	&:hover{
+		color: lighten(@textColor, 15%);
+	}
+}
+
+
+/*content strony*/
+#strona_content{
+	position: absolute;
+	top: calc(~'100%');
+	left: 0;
+	min-height: 100%;
+	width: 100%;
+	/*background-image: url(../img/maxresdefault.png);*/
+	background-attachment: fixed;
+	background-size: 100%;
+	article{
+		z-index: 90;
+		margin-top: 450px;
+		width: calc(~'100% - 300px*2');
+		padding: 50px 300px;
+		background-color: @bg0Color;
+		h1{
+			text-align: center;
+			font-size: 50px;
+		}
+	}
+}
+.podswietlenie,
+h2{
+	color: lighten(@textColor, 15);
+	font-weight: 900;
+}
+
+/*Stopka*/
+#stopka{
+	margin-top: 450px;
+	width: calc(~'100% - 50px*2');
+	height: 150px;
+	padding: 50px;
+	background-color: @bg0Color;
+	font-size: 100%;
+	line-height: 50%;
+	section{
+		float: left;
+		margin-right: 50px;
+		a{
+			color: @textColor;
+
+			&:hover{
+				color: lighten(@textColor, 15%);
+			}
+		}
+		li{
+
+		line-height: 100%;
+		}
+	}
+}

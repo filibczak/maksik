@@ -1,0 +1,49 @@
+body{
+	background-color: green;
+	color: white;
+}
+#box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 600px;
+
+}
+
+.sort{
+	@padding: 10px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(~'100% - ' @padding*2);
+	height: 25px;
+
+	font-size: 20px;
+	padding: @padding;
+	background-color: darkgreen;
+}
+
+.time{
+	float: right;
+}
+#go{
+	@width: 50px;
+	@padding: 5px;
+
+	position: absolute;
+	top: 0;
+	right: -@width - 10px - @padding;
+	width: @width;
+	height: @width;
+	padding: @padding;
+
+	cursor: pointer;
+	font-size: 50px;
+	line-height: 60%;
+	background-color: darkgreen;
+}
+#go:hover{
+
+	background-color: lighten(darkgreen, 2%);
+}

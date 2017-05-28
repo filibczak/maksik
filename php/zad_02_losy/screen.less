@@ -1,0 +1,112 @@
+
+@color: #ABABAB;
+@bgc: #333333;
+section,
+aside{
+	display: block;
+}
+input{
+	background-color: @bgc;
+	color: @color;
+	border: none;
+	outline: none;
+	padding: none;
+	margin: none;
+}
+body{
+	background-color: @bgc;
+	color: @color;
+}
+#box{
+	@height: 500px;
+	@width: 700px;
+	background-color: darken(@bgc,8%);
+	height: @height;
+	width: @width;
+	margin: 0 auto;
+	margin-top: 80px;
+	overflow: hidden;
+	box-shadow: 0 0 3px black;
+	text-align: center;
+	#head{
+		box-shadow: 0 0 10px black;
+		padding: 10px 15px;
+		font-size: 30px;
+		font-weight: 900;
+	}//#head end
+	@liczbyWid: 500px;
+	#liczby,
+	#wynik{
+		float: left;
+		height: calc(~'100% - 15px*2 - 54px');
+		margin-top: 15px;
+		section{
+			margin-bottom: 15px;
+			width: 100%;
+			min-height: 20px;
+		}
+	}//#wynik end
+	#liczby{
+		width: @liczbyWid - 15px;
+		padding-left: 15px;
+	}//#liczby end
+	#wynik{
+		width: @width - @liczbyWid - 2px;
+		border-left: 2px solid @bgc;
+	}//#wynik end
+}//#box end
+#liczbyForm{
+	margin-top: 130px;
+}
+input[name="liczba"]{
+	padding: 2px 0;
+	padding-left: 10px;
+	width: 30px;
+}
+input[name="submit"]{
+	cursor: pointer;
+	margin-top: 15px;
+	width: 200px;
+	padding: 10px;
+	font-weight: 900;
+	&:hover{
+		box-shadow: 0 0 2px black;
+	}
+	&:disabled{
+		color: darken(@color,10%);
+		cursor: default;
+		box-shadow: none;
+	}
+}
+#refresh{
+	cursor: pointer;
+	margin-top: 15px;
+	width: 180px;
+	padding: 10px;
+	font-weight: 900;
+	display: none;
+	&:hover{
+		box-shadow: 0 0 2px black;
+	}
+}
+#malo,
+#duzo{
+	display: none;
+	span{
+		color: red;
+		font-weight: 900;
+	}
+}
+#rowno,
+#rownofirst{
+	display: none;
+	span{
+		color: green;
+		font-weight: 900;
+	}
+}
+#teakoff{
+	font-size: 60px;
+	font-weight: 900;
+	color: green;
+}

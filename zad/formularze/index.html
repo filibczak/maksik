@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="Author" content="kkukiz">
+    <!--<meta name="Keywords" content="kukiz, krzysztof kukiz, Qkiz, przykładowa strona, strona startowa, html, html5, css, css3, js, javascript, jq, jQuery">
+    <meta name="Description" content="Moja strona startowa dla portalu maksik.glt.pl">-->
+    
+    <title>kkukiz &copy; 2016</title>
+	
+	<!--<link rel="icon" href="cos.png">-->
+	<link rel="stylesheet" href="style/screen.css">
+    <!--<script src="http://Qkiz404.pl/script/less.js"></script>-->
+    
+    <script src="../../script/jq.js"></script>
+    <script src="script/main.js"></script>
+    
+</head>
+<body>
+<div id="box">
+	<form  method="post" id="dane">
+    	<p>
+        	<label for="imie">* Imie i Nazwisko:
+                <br>
+    			<input type="text" name="imie" id="imie" placeholder="np. Jan Kowalski" required autofocus>
+            </label>
+        </p>
+    	<p>
+        	<label for="wiek">* Wiek:
+                <br>
+    			<input type="number" name="wiek" id="wiek" min="0" placeholder="np. 18" required>
+            </label>
+        </p>
+    	<p>
+        	* Płeć:
+            <br>
+            <label style="cursor: pointer;">
+			     <input type="radio" name="plec" class="plec" value="kobieta" required>Kobieta
+            </label>
+            <br>
+            <label style="cursor: pointer;">
+			     <input type="radio" name="plec" class="plec" value="mezczyzna" required>Mężczyzna
+            </label>
+        </p>
+    	<p>
+        	Kolor:
+            <br>
+            <label style="cursor: pointer;">
+			     <input type="checkbox" name="kolor" class="kolor" value="czerwony"><span style="color:red">Czerowy</span>
+            </label>
+            <br>
+            <label style="cursor: pointer;">
+			     <input type="checkbox" name="kolor" class="kolor" value="zielony"><span style="color:green">Zielony</span>
+            </label>
+            <br>
+            <label style="cursor: pointer;">
+			     <input type="checkbox" name="kolor" class="kolor" value="niebieski"><span style="color:lightblue">Niebiseki</span>
+            </label>
+            <br>
+            <label style="cursor: pointer;">
+			     <input type="checkbox" name="kolor" class="kolor" value="inny"><span id="inny">Inny</span>
+            </label>
+        </p>
+    	<p>
+        	<label for="opinia">Opinia:</label>
+            <br>
+			<textarea name="opinia" id="opinia" rows="5" cols="25"></textarea>
+        </p>
+    	<p>
+            <label style="cursor: pointer;">
+			     <input type="checkbox" name="zgoda" id="zgoda">Wyrażam zgode na przedważanie moich danych osobowych
+            </label>
+        </p>
+    	<p>
+			<input type="reset" name="wyczysc" id="wyczysc" value="wyczysc">
+			<input type="submit" name="wyslij" id="wyslij" value="wyślij" disabled="disabled">
+        </p>
+    </form>
+    
+</div>
+</body>
+</html>

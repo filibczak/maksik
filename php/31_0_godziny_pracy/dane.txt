@@ -1,0 +1,61 @@
+
+	
+	
+	
+	
+	
+	
+	
+	<thead>
+		<tr>
+			<th>Imię i Nazwisko</th>
+			<th>Poniedziałek</th>
+			<th>Wtorek</th>
+			<th>Środa</th>
+			<th>Czwartek</th>
+			<th>Piątek</th>
+		</tr>
+	</thead>
+	<tbody>
+	
+		<tr>
+			<th contenteditable="true">
+				<span class="imie">Marcin Kolany</span>
+				<span class="stanowisko">Dyrek</span>
+			</th>
+			<td contenteditable="true">12:00 - 15:30</td>
+			<td contenteditable="true">8:00 - 16:98</td>
+			<td contenteditable="true">9:00 - 14:14</td>
+			<td contenteditable="true">7:30 - 14:13</td>
+			<td contenteditable="true">7:30 - 13:14</td>
+		</tr>
+	
+		<tr>
+			<th contenteditable="true">
+				<span class="imie">Katarzyna Radoń</span>
+				<span class="stanowisko">Zastępczy dyrektor</span>
+			</th>
+			<td contenteditable="true">7:00 - 14:15</td>
+			<td contenteditable="true">7:30 - 15:16</td>
+			<td contenteditable="true">8:00 - 14:14</td>
+			<td contenteditable="true">7:30 - 15:15</td>
+			<td contenteditable="true">9:00 - 16:16</td>
+		</tr>
+	
+		<tr>
+			<th contenteditable="true">
+				<span class="imie">Alicja Kulewska</span>
+				<span class="stanowisko">tylko oddaj zeszyt na czas</span>
+			</th>
+			<td contenteditable="true">7:00 - 15:15</td>
+			<td contenteditable="true">8:30 - 14:14</td>
+			<td contenteditable="true">7: 30- 16:16</td>
+			<td contenteditable="true">9:00 - 15:15</td>
+			<td contenteditable="true">8:00 - 15:15</td>
+		</tr>
+			
+		<tr>
+			<td colspan="6"><button id="zapisz">Zapisz</button></td>
+		</tr>
+								
+	</tbody>

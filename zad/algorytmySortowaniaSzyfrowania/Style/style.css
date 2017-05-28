@@ -1,0 +1,168 @@
+a, a:hover, a:active, a:visited
+{
+	text-decoration: none;	
+}
+nav, section, header, footer, article
+{
+	display: block;	
+}
+body
+{
+	background-image: url(../../../tlo/escheresque_ste.png);
+	background-attachment: fixed;
+	color: white;	
+}
+#doGury
+{
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	
+	width: 30px;
+	height: 30px;
+	
+	padding: 15px;
+	padding-left: 10px;
+	padding-right: 20px;
+	
+	background-color: #2D3C2D;
+	border: 3px solid #1c2b1c;
+	border-radius: 10px;
+	color: white;
+	
+	font-size: 30px;
+	z-index: 300;
+}
+#doGury:hover
+{
+	
+	background-color: #3e4d3e;
+	border: 3px solid #2D3C2D;
+}
+#box
+{
+	position: absolute;
+	top: 0;
+	left: clacl(50% - 1000px/2);
+	min-height: 100%;
+	width: 1000px;
+}
+#naglowek
+{
+	background-color: #2D3C2D;
+	
+	padding: 50px;
+	padding-right: 0;
+	font-size: 50px;
+    font-family: 'Chewy', cursive;
+}
+#menu
+{
+	position: absolute;
+	top: 150px;
+	left: 0;
+	height: 70px;
+	width: calc(100% - 50px*2);
+	padding: 50px;
+	padding-top: 0;
+	background-color: #2D3C2D;
+}
+.opcje
+{
+	background-color: #5C6258;
+	height: 60px;
+	float: left;
+	overflow: hidden;
+	font-size: 25px;
+    border-bottom: 0 solid #FFFFFF;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.opcja
+{
+	height: 30px;
+	width: 100%;
+	padding: 15px;
+	color: white;
+}
+#content
+{
+	min-height: 200px;
+	width: calc(100% - 50px*2);
+	padding: 50px;
+	margin-top: 150px;
+	background-color: #2D3C2D;
+    text-align: justify;
+    line-height: 140%;
+    color: #949E8E;
+    font-size: 20px;
+}
+.artykol
+{
+	margin-bottom: 80px;
+	text-height: 150%;
+}
+.boldTextArticle
+{
+	font-weight: 900;	
+	font-size: 1.1em;
+	
+	
+}
+.articleNameLink
+{
+	opacity: 0;	
+}
+h1
+{
+	font-size: 200%;
+	margin-bottom: 20px;
+}
+li
+{
+	margin-top: 15px;
+	list-style-position: outside;	
+}
+#stopka
+{
+	margin-top: 50px;
+	padding: 50px;
+	width: calc(100% - 50px*2);
+	min-height: 50px;
+	background-color: #2D3C2D;
+	
+	color: grey;
+}
+.stopka
+{
+	height: 100px;
+	float: left;
+	margin-right: 50px;
+}
+.stopkaLinki
+{
+	min-height: 50px;
+	min-width: 50px;
+	float: left;
+	margin-left: 20px;
+	line-height: 150%;
+}
+.jedenLink
+{
+	color: grey;	
+}
+
+.jedenLink:hover
+{
+	color: white;	
+}
+
+
+
+
+
+
+
+
+
+

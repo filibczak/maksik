@@ -1,0 +1,159 @@
+header, nav, section, article, aside, fotter {
+  display: block; }
+
+body {
+  background-color: #fff;
+  background-image: url(ignasi_pattern_s.png); }
+
+#which-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: darkgreen;
+  box-shadow: 0 0 20px -4px black; }
+  #which-pic .pic {
+    margin-left: 15px;
+    margin-top: 15px;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    line-height: 150%;
+    box-shadow: 0 0 10px -4px black;
+    color: #222;
+    background-color: darkgreen;
+    transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    cursor: pointer;
+    text-align: center;
+    font-size: 32px;
+    text-decoration: none; }
+    #which-pic .pic:hover {
+      box-shadow: 0 0 10px -1px black;
+      background-color: green; }
+  #which-pic .checked {
+    cursor: pointer;
+    text-align: center;
+    font-size: 32px;
+    box-shadow: 0 0 10px -1px black; }
+
+#gui {
+  position: absolute;
+  top: 150px;
+  left: calc(100%/2 -  1200px/2);
+  width: 1200px;
+  height: 600px; }
+  #gui > #draw {
+    float: left;
+    width: 930px;
+    height: 600px;
+    box-shadow: 0 0 20px -4px black;
+    background-color: #fff; }
+    #gui > #draw .px {
+      width: 10px;
+      height: 10px;
+      display: block;
+      float: left; }
+  #gui > #tools {
+    float: right;
+    width: 250px; }
+    #gui > #tools > section {
+      box-shadow: 0 0 20px -4px black;
+      padding: 15px;
+      background-color: #aaa;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 15px; }
+    #gui > #tools > #colors > #active-color > input {
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      outline: 0;
+      border: 0;
+      width: 20px;
+      height: 20px;
+      box-shadow: 0 0 10px -3px;
+      -webkit-appearance: none; }
+      #gui > #tools > #colors > #active-color > input::-webkit-color-swatch-wrapper {
+        padding: 0; }
+      #gui > #tools > #colors > #active-color > input::-webkit-color-swatch {
+        border: none; }
+    #gui > #tools > #colors > #active-color > label {
+      position: relative;
+      vertical-align: 5px; }
+    #gui > #tools > #colors > #last-colors {
+      margin-top: 15px; }
+      #gui > #tools > #colors > #last-colors > span {
+        display: block;
+        margin-bottom: 44px; }
+      #gui > #tools > #colors > #last-colors > .color {
+        position: relative;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        width: 55px;
+        height: 55px;
+        border-collapse: collapse;
+        cursor: pointer;
+        z-index: 0;
+        text-align: center;
+        transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease; }
+        #gui > #tools > #colors > #last-colors > .color:hover {
+          box-shadow: 0 0 40px 1px black;
+          z-index: 10;
+          top: -5px;
+          left: -5px;
+          width: 65px;
+          height: 65px;
+          margin-right: -10px;
+          margin-bottom: -10px; }
+          #gui > #tools > #colors > #last-colors > .color:hover > span {
+            display: inline-block;
+            vertical-align: -23px;
+            font-size: 16px; }
+        #gui > #tools > #colors > #last-colors > .color > span {
+          display: inline-block;
+          vertical-align: -18px;
+          transition: all 0.2s ease;
+          -moz-transition: all 0.2s ease;
+          -webkit-transition: all 0.2s ease;
+          -ms-transition: all 0.2s ease;
+          font-size: 12px; }
+    #gui > #tools > #colors #restCookies {
+      color: #960000;
+      cursor: pointer;
+      font-size: 20px; }
+      #gui > #tools > #colors #restCookies:hover {
+        color: #E30000; }
+    #gui > #tools > #save > button {
+      background-color: darkgreen !important;
+      transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease; }
+      #gui > #tools > #save > button:hover {
+        background-color: green !important; }
+    #gui > #tools button {
+      border: 0;
+      outline: 0;
+      margin: 0;
+      padding: 0;
+      width: 220px;
+      height: 50px;
+      cursor: pointer;
+      font-size: 20px;
+      letter-spacing: 5px;
+      font-weight: 900;
+      background-color: grey;
+      transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease; }
+      #gui > #tools button:hover {
+        background-color: lightgrey; }

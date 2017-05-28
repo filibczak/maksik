@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Sortowanie &amp; Szyfrowanie</title>
+        <link rel="stylesheet" href="Style/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Chewy&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+        <script src="../../jquery-1.12.2.min.js"></script>
+        <script src="JavaScript/menu.js"></script>
+        <script src="JavaScript/przypisy.js"></script>
+        <script src="JavaScript/width.js"></script>
+    </head>
+    
+    <body>
+        <a href="#up"><div id="doGury">UP</div></a>
+    	<a name="up"></a>
+    <div id="box">
+    	<header id="naglowek">Sortowanie</header>
+    	<nav id="menu"></nav>
+        <section id="content">
+            
+        	<a name="1" class="articleNameLink">a</a><br>
+        	<article class="artykol">
+            	<h1>Sortowanie bąbelkowe</h1>
+                <p>Jest to jeden z prostszych algorytmów sortowania.
+Sprawdzamy całą tablicę od końca, jeżeli trafimy na parę elementów, w której większy poprzedza mniejszy to zamieniamy je miejscami. Po przejściu całej tablicy znów zaczynamy przeszukiwać tą tablicę od końca. Czynność powtarzamy tak długo aż podczas sprawdzania całej tablicy, nie zajdzie ani jedna zamiana elementów. Algorytm nosi nazwę bąbelkowego, gdyż najmniejsze liczby "wypływają" z dołu tablicy na jej szczyt, podobnie jak bąbelki powietrza w wodzie.</p>
+            </article>
+            
+        	<a name="2" class="articleNameLink">a</a><br>
+        	<article class="artykol">
+            	<h1>Sortowanie przez wstawianie</h1>
+                <p>Zasada działania tego algorytmu jest często porównywana do porządkowania kart w wachlarz podczas gry. Każdą kartę wstawiamy w odpowiednie miejsce, tzn. po młodszej, ale przed starszą. Podobnie jest z liczbami.
+Pierwszy element pozostaje na swoim miejscu. Następnie bierzemy drugi i sprawdzamy, w jakiej relacji jest on z pierwszym. Jeśli jest niemniejszy, to zostaje na drugim miejscu, w przeciwnym wypadku wędruje na pierwsze miejsce. Dalej sprawdzamy trzeci element (porównujemy go do dwóch pierwszych i wstawiamy w odpowiednie miejsce), czwarty (porównujemy z trzema pierwszymi), piąty itd. Idea działania algorytmu opiera się na podziale ciągu na dwie części: pierwsza jest posortowana, druga jeszcze nie. Wybieramy kolejną liczbę z drugiej części i wstawiamy ją do pierwszej. Ponieważ jest ona posortowana, to szukamy dla naszej liczby takiego miejsca, aby liczba na lewo była niewiększa a liczba na prawo niemniejsza.</p>
+            </article>
+            
+        	<a name="3" class="articleNameLink">a</a><br>
+        	<article class="artykol">
+            	<h1>Sortowanie przez wymianę</h1>
+                <p>Metoda ta nazywana jest sortowaniem przez wymianę gdyż na początku szukany jest najmniejszy element, po znalezieniu go jest on zamieniany z pierwszym elementem tablicy.
+Następnie szukany jest znów najmniejszy element, ale począwszy od elementu drugiego (pierwszy - najmniejszy jest już wstawiony na odpowiednie miejsce), po jego znalezieniu jest on zamieniany z drugim elementem. Czynność tą powtarzamy kolejno na elementach od trzeciego, czwartego, aż do końca.</p>
+            </article>
+            
+        </section>
+        <footer id="stopka">
+        	<div class="stopka">kukizk &copy; 2016</div>
+        	<div class="stopka" id="link">
+            	Przepisy:<br>
+                <div id="linki1" class="stopkaLinki"></div>
+                <div id="linki2" class="stopkaLinki"></div>
+            </div>
+        </footer>
+    </div>
+    </body>
+</html>

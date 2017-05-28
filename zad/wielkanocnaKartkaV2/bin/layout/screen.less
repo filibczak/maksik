@@ -1,0 +1,70 @@
+div,section,article,header,nav,aside,footer{
+	display: block;
+}
+body{
+	background-image: url(../img/bg/congruent_pentagon.png)/*|| This pattern is downloaded from www.subtlepatterns.com || If you need more, that's where to get'em. ||*/;
+}
+@boxWidth: 1000px;
+@boxMinHeight: 200px;
+@gameWidth: 750px;
+@gameHeight: 500px;
+#box{
+	position: absolute;
+	top: 10px;
+	left: calc(~'50% - ' @boxWidth/2);
+	width: @boxWidth;
+	min-height: @boxMinHeight;
+	box-shadow: 0 0 10px black;
+}
+#game{
+	position: absolute;
+	top: 0;
+	left: 0;
+	float: left;
+	width: @gameWidth;
+	height: @gameHeight;
+	background-color: skyblue;
+}
+#tips{
+	float: right;
+	width: @boxWidth - @gameWidth;
+	height: @gameHeight;
+	background-color: green;	
+}
+#topTen{
+	float: right;
+	width: @boxWidth;
+	min-height: 50px;
+	background-color: pink;
+}
+/*In Game*/
+#grass{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 50px;
+	width: 100%;
+	overflow: hidden;
+	img{
+		position: relative;
+		top: 2px;	
+		width: 125px;
+		float: left;
+	}
+	z-index: 100;
+}
+#rabbit{
+	position: absolute;
+	left: 0;
+	bottom: 35px;
+	background-color: red;
+	width: 100px;
+	height: 100px;
+	img{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 75%;
+	}
+	z-index: 90;
+}

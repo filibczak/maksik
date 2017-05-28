@@ -1,0 +1,122 @@
+header,nav,article,section,aside,footer{
+	display: block;
+}
+
+body{
+	background-color: grey;
+	color: #ddd;
+}
+/*	user panel 	*/
+#usrPanem{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 30px;
+	width: calc(100% - 60px);
+	background-color: darkgrey;
+	padding: 10px 30px;
+	font-size: 25px;
+	box-shadow: 0 0 10px -4px black;
+	font-weight: 900;
+}
+#witaj{
+	float: left;
+}
+#logInOut{
+	float: right;
+	cursor: pointer;
+}
+#logInOut:hover{
+	color: #ccc;
+}
+
+/*	menu	*/
+#strony{
+	position: fixed;
+	top: 60px;
+	left: 0;
+	height: 30px;
+	width: 100%;
+}
+#wybStorny{
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+#wybStorny li{
+	height: 100%;
+	display: block;
+	float: left;
+	margin-left: 30px;
+}
+
+#wybStorny a{
+	height: 30px;
+	text-decoration: none;
+}
+#wybStorny a span{
+	display: block;
+	height: 100%;
+	width: 100%;
+	font-size: 20px;
+	color: #ddd;
+	font-weight: 900;
+}
+#wybStorny a span:hover{
+	color: #fff;
+}
+
+/*	content */
+#content{
+	margin-top: 95px;
+	width: 100%;
+	height: 400px;
+	outline: 1px solid red;
+}
+
+/*	stopka	*/
+#stopka{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 30px;
+	width: calc(100% - 60px);
+	padding: 10px 30px;
+	font-size: 26px;
+	text-align: center;
+	color: grey;
+	background-color: black;
+}
+
+/*	login panel 	*/
+#loginpanel{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top:0;
+	left: 0;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 100;
+}
+#loginpanel form label{
+	display: block;
+	margin-bottom: 5px;
+}
+#loginpanel form label span{
+	display: block;
+	float: left;
+	width: 50px;
+}
+#loginclose{
+	cursor: pointer;
+	color: red;
+	font-weight: 900;
+	height: 15px;
+	width: 15px;
+}
+#loginclose:hover{
+	color: darkred;
+}

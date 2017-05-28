@@ -1,0 +1,185 @@
+header, nav, section, article, footer
+{
+	display: block;
+}
+body,html
+{
+	background-color: #DADDEB;
+	font-size:16px;
+	color: black;
+}
+#box
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+#naglowek
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	
+	background-color: #4a4c51;
+	/*background-image: url(img/fiat-top-naglowek.png);*/
+	background-size: 100%;
+	background-repeat: no-repeat;
+	
+	box-shadow: 0 0 35px black;
+	
+	color: white;
+	text-shadow: 0 0 15px #000;
+}
+#naglowek_txt
+{
+	position:absolute;
+	top:0;
+	margin: 0 ;
+	text-align:center;
+	width: 100%;
+	font-size:46px;
+	margin-top: 15px;
+	z-index: 3;
+	
+}
+#tlo_gura
+{
+	position:absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 2;
+}
+#do_gr
+{
+	position:fixed;
+	right: 25px;
+	bottom: 25px;
+	background-color: rgba(255,255,255,0.5);
+	border: 3px solid #fff;	
+	padding: 15px;
+	font-size: 1.9em;
+	color: white;
+	text-shadow: 0 0 15px black;
+	border-radius: 15px;
+	z-index: 1;
+}
+#autor
+{
+	position:fixed;
+	left: -65px;
+	bottom: 95px;
+	
+	transform:rotate(90deg);
+	
+	color: grey;
+	font-size: 1.1em;
+    cursor:vertical-text;
+}
+#menu_head
+{
+	text-align: center;
+	font-size: 3em;
+	color: grey;
+	z-index: 1;
+	text-shadow: 1px 1px 1px grey;
+}
+#menu_break
+{
+	border: 1px solid grey;
+	width: 90%;
+}
+#menu
+{
+	position: fixed;
+	top: 20%;
+	right: 0;
+	min-height: 5px;
+	width: 18%;
+	background-color: rgba(255,255,255,0.3);
+}
+.men_nag{
+	text-align:center;
+	color: grey;
+	font-size: 1.5em;
+	text-shadow: 1px 1px 1px grey;
+}
+.pod_wyb
+{
+	color: grey;
+	font-size: 120%;
+}
+.pod_wyb:hover
+{
+	color: black;
+	font-size: 130%;
+	text-shadow: 0 0 1px black;
+
+}
+#tresc_str
+{
+	position: absolute;
+	top: calc(100% + 250px);
+	left: 0;
+	width: 70%;
+	margin: 0 10%;
+	margin-bottom: 200px;
+}
+.dzial
+{
+	background-color: rgba(255,255,255,0.3);
+	margin-bottom: 10%;
+}
+.naglowek_dzialu
+{
+	font-size: 3em;
+	margin-bottom: 15px;
+	text-align:center;
+	text-shadow: 0 0 7px darkgrey;
+	color: #4a4c51;
+	padding: 2% 5% 2% 5%;
+}
+.naglowek_artykulu
+{
+	font-size: 1.9em;
+	text-align: left;
+	text-shadow: 0 0 7px darkgrey;
+	color: #4a4c51;
+	padding: 2% 5% 0 5%;
+}
+.artykol
+{
+	padding: 0 5% 1% 5%;
+}
+p
+{
+	line-height: 140%;
+	text-align:justify;
+	font-size: 1.1em;
+}
+a, a:hover, a:active, a:link, a:visited
+{
+	text-decoration:none;	
+}
+.obrazek_r
+{
+	border: 3px grey solid;
+	max-width: 50%;
+	float: right;
+	margin: 15px;
+}
+.obrazek_l
+{
+	border: 3px grey solid;
+	max-width: 50%;
+	float: left;
+	margin: 15px;
+}
+ul, ol, li
+{
+	list-style-type: none;	
+}

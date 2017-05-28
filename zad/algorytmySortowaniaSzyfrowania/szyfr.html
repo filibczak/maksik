@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Sortowanie &amp; Szyfrowanie</title>
+        <link rel="stylesheet" href="Style/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Chewy&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+        <script src="../../jquery-1.12.2.min.js"></script>
+        <script src="JavaScript/menu.js"></script>
+        <script src="JavaScript/przypisy.js"></script>
+        <script src="JavaScript/width.js"></script>
+    </head>
+    
+    <body>
+        <a href="#up"><div id="doGury">UP</div></a>
+    	<a name="up"></a>
+    <div id="box">
+    	<header id="naglowek">Szyfrowanie</header>
+    	<nav id="menu"></nav>
+        <section id="content">
+        
+        	<article class="artykol">
+            	<h1>Zagadnienia związane z szyfrowaniem</h1>
+                <ul>
+                    <li><span class="boldTextArticle">Szyfrogram</span> - jest to zaszyfrowana wiadomość</li>
+                    <li><span class="boldTextArticle">Tekst jawny</span> - jest to oryginalna wiadomość</li>
+                    <li><span class="boldTextArticle">Szyfrowanie przesuwne</span> - polega na przesunięciu liter w alfabecie o pewną stałą</li>
+                    <li><span class="boldTextArticle">Szyfrowanie symetryczne</span> - do szyfrowania i deszyfrowania wykorzystywany jest ten sam klucz</li>
+                    <li><span class="boldTextArticle">Szyfrowanie asymetryczne</span> - klucz szyfrujący jest inny niż deszyfrujący</li>
+                    <li><span class="boldTextArticle">Kryptografia</span> - jest to dziedzina zajmująca się zabezpieczaniem danych</li>
+                    <li><span class="boldTextArticle">Kryptoanaliza</span> - dziedzina badająca algorytmy szyfrujące pod kątem bezpieczeństwa, sprawdza na ile bezpieczny jest dany szyfr oraz czy da się go złamać bez znajomości klucza.</li>
+                    <li><span class="boldTextArticle">Klucz publiczny i klucz prywatny</span> - w tym przypadku klucz szyfrujący jest inny niż deszyfrujący (szyfrowanie asymetryczne), dodatkowo klucz szyfrujący jest upubliczniony - jest to klucz publiczny, natomiast klucz deszyfrujący zna tylko osoba, do której ma trafić zaszyfrowana wiadomość - taki klucz nazywamy kluczem prywatnym.</li>
+                    <li><span class="boldTextArticle">Steganografia</span> - ukrywanie tajnych wiadomości w wiadomościach, które nie są tajne</li>
+				</ul>
+            </article>
+            
+        	<a name="1" class="articleNameLink">a</a><br>
+        	<article class="artykol">
+            	<h1>TRYBY PRACY</h1>
+                <ul>
+                	<li>
+                    	<h2>Tryb ECB (Electronic Codebook)</h2>
+                        <p>W trybie tym tekst jawny dzieli się na bloki i szyfruje się je oddzielnie i niezależnie od siebie za pomocą tego samego klucza. Zaletą tego trybu test to, że uszkodzenie lub utrata pojedynczych bloków nie ma żadnego wpływu na możliwość odszyfrowania pozostałej części kryptogramu</p>
+                    </li>
+                	<li>
+                    	<h2>Tryb CBC (Cipher Block Chaining)</h2>
+                        <p>Jest to zmodyfikowany tryb ECB. Zmiana polega na tym, że każdy następny kryptogram jest uzależniony od poprzedniego.</p>
+                    </li>
+                	<li>
+                    	<h2>Tryb CFB (Cipher Feedback)</h2>
+                        <p>W trybie tym, w odróżnieniu od dwóch poprzednich szyfrowane są nie całe bloki, ale fragmenty złożone z mniejszej liczby bitów (na przykład z 8 bitów, czyli w praktyce 1 litera). Może on być użyty do szyfrowania połączenia między dwoma komputerami. Wymagane jest wtedy natychmiastowe szyfrowanie i przesyłanie pojedynczych znaków wprowadzanych z klawiatury, bez czekania aż uzbiera się cały blok.</p>
+                    </li>
+                	<li>
+                    	<h2>Tryb OFB (Output Feedback)</h2>
+                        <p>Ma on budowę bardzo podobną do CFB. Także w tym przypadku szyfruje się po j bitów i wykorzystuje rejestr przesuwający, który na początku zawiera losową wartość początkową. Jedyna różnica jest w sposobie aktualizacji stanu układu. O ile w CFB wartość umieszczana w rejestrze przesuwającym zależała od danych, to w trybie OFB zależy jedy-nie od powstałego kryptogramu. Tak więc ciąg bitów używany przy obliczaniu różnicy symetrycznej z tekstem jawnym jest zawsze identyczny dla tego samego klucza i wartości początkowej. Dlatego, posługując się jednym kluczem, za każdym razem powinno się używać innej wartości początkowej.</p>
+                    </li>
+                </ul>
+            </article>
+            
+        	<a name="2" class="articleNameLink">a</a><br>
+        	<article class="artykol">
+            	<h1>Alogrytmy DES</h1>
+                <p>DES (Data Encryption Standard) jest algorytmem blokowym. Jest on najstarszym z używanych do dziś algorytmów, jego korzenie sięgają lat siedemdziesiątych. Został on wstępnie zaprojektowany w laboratoriach firmy IBM, a następnie w 1977 roku zmodyfikowany przez NSA (National Security Agency). DES został uznany w USA za standard dla celów niemilitarnych.
+                <br><br>
+                <span class="boldTextArticle">Budowa algorytmu</span>
+Algorytm ten szyfruje bloki długości 64 bitów. Klucz jest również 64-bitowy, z czego 8 jest bitami parzystości. Realna długość klucza wynosi więc 56 bitów.
+                </p>
+            </article>
+            
+        	<a name="3" class="articleNameLink">a</a><br>
+        	<article class="artykol">
+            	<h1>Szyfr Cezara</h1>
+                <p>Jest to jeden z najstarszych znanych szyfrów, który jak nazwa wskazuje był stosowany przez rzymskiego wodza, Juliusza Cezara. Stosował on tę metodę zabezpieczania przed wysłaniem ważnych wiadomości, np. poprzez gońca. Miało to uniemożliwić lokalizację wojsk w przypadku przechwycenia informacji. Jego działanie polega na zastępowaniu litery właściwej, znakiem znajdującym się ustalone miejsca dalej w alfabecie (podstawowo 3). Szyfry, których działanie polega na podstawianiu jednej litery w miejsce drugiej, nazywamy szyframi podstawieniowymi. Jedną z ich wariacji są szyfry monoalfabetyczne (do nich zalicza się szyfr Cezara) czyli takie, w których każda litera tekstu przed kodowaniem ma swój odpowiednik w literze tekstu zakodowanego.
+                </p>
+            </article>
+            
+        </section>
+        <footer id="stopka">
+        	<div class="stopka">kukizk &copy; 2016</div>
+        	<div class="stopka" id="link">
+            	Przepisy:<br>
+                <div id="linki1" class="stopkaLinki"></div>
+                <div id="linki2" class="stopkaLinki"></div>
+            </div>
+        </footer>
+    </div>
+    </body>
+</html>

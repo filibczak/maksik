@@ -1,0 +1,139 @@
+html, body
+{
+	background-color: #99B57C;
+}
+#box
+{
+	position: absolute;
+	top: 50px;
+	left: calc(50% - 800px/2 - 10px);
+	height: 500px;
+	width:800px;
+	border: 10px solid #22291C;
+	box-shadow: 0 0 20px black;
+	
+	/*background-color: #2B3323;*/
+	background-color: #ACE9FB;
+}
+/*--- napisy zyczenia ---*/
+#napisy
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#logo_1
+{
+	opacity: 1;
+	position: absolute;
+	top: 50px;
+	left: 170px;
+	height:80%;
+}
+.zyczeniaBox
+{
+	position: absolute;
+	top: 50px;
+	left: 235px;
+	height: auto;
+	width: 300px;
+	padding: 0 15px;
+	
+	border: 3px solid #637550;
+	border-radius: 10px;
+	background-color: #748A5E;
+	opacity: 0;
+	box-shadow: 0 0 20px black;
+	
+	text-align: center;
+	font-family: 'Kaushan Script', cursive;
+	color: white;
+	text-shadow: 0 0 10px black;
+	font-size: 30px;
+	bold: 900;
+}
+/*--- rysunki / tlo / reszta kartki ---*/
+#kartka
+{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#slonce
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100px;
+}
+#chmurka
+{
+	position: absolute;
+	top: 15px;
+	right: -200px;
+}
+#zajacSkacz1
+{
+	position: absolute;
+	bottom: 0;
+	left: -250px;;
+	height: 250px;
+}
+#zajacSkacz2
+{
+	position: absolute;
+	bottom: 0;
+	right: -250px;;
+	height: 150px;
+}
+#kuraki
+{
+	position: absolute;
+	bottom: 0;
+	left: 60px;
+	height: 100px;
+}
+#owieczka
+{
+	position: absolute;
+	bottom: 0;
+	right: 60px;
+	height: 200px;
+}
+#koszyk
+{
+	position: absolute;
+	bottom: 5px;
+	left: 220px;
+	height: 150px;
+}
+#zajac
+{
+	position: absolute;
+	bottom: -200px;
+	left: 300px;
+	height: 200px;
+}
+.trawa
+{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+/*--- reszta ---*/
+#autor
+{
+	opacity: 0;
+	position: absolute;
+	top: 170px;
+	left: 60px;
+	font-size: 12px;
+	font-weight: 900;
+	color: #22291C;
+	text-shadow: 0 0 6px black;
+}
