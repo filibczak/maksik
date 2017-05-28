@@ -1,0 +1,38 @@
+body {
+  background-image: url(giftly.png);
+  /*
+  ========================================================
+  This pattern is downloaded from www.subtlepatterns.com 
+  If you need more, that's where to get'em.
+  ========================================================
+  */ }
+
+#box {
+  color: grey;
+  font-size: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box; }
+  #box > article {
+    box-sizing: border-box;
+    font-size: 24px;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-right: 3px solid grey; }
+    #box > article::-webkit-scrollbar {
+      display: none; }
+    #box > article:nth-child(3n+1) {
+      width: 20%; }
+    #box > article:nth-child(3n+2) {
+      width: 50%; }
+    #box > article:nth-child(3n+3) {
+      width: 30%;
+      border-right: none; }
