@@ -70,8 +70,7 @@ function sql2array($sql){
 				$array[$i][$key] = $value;
 			}
 		}
-	}
-
+	}else echo 'bad sql';
 	return $array;
 }
 
