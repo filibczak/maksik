@@ -38,6 +38,42 @@ if(isset($_POST['op'])){
 			$sql = "UPDATE filRezyser SET rezImie = '$imie', rezNazwisko = '$nazwisko', rezDataUrodzenia = '$wiekU' WHERE rezID = '$id' OR rezID = $id";
 			send($connect, $sql);
 			break;
+		case 'gat':
+			$nazwa = $_POST['nazwa'];
+			if(!jest_juz_gat($connect, $nazwa)){
+				$sql = "INSERT INTO filGatunek VALUES(NULL, '$nazwa')";
+ 				send($connect, $sql);
+			}else echo 'Już jest ten gatuenk!';
+			break;
+		case 'gatUpd':
+			$id = $_POST['id'];
+			$nazwa = $_POST['nazwa'];
+			$sql = "UPDATE filGatunek SET gatNazwa = '$nazwa' WHERE gatID = '$id' OR gatID = $id";
+			send($connect, $sql);
+			break;
+		case 'flm':
+			$tytul = $_POST['tytul'];
+			$rez = $_POST['rez'];
+			$gat = $_POST['gat'];
+			$rok = $_POST['rok'];
+			$czas = $_POST['czas'].':00';
+			$sql = "INSERT INTO filFilmy VALUES (NULL, '$tytul', '$rez', '$rok', '$gat', '$czas');";
+			send($connect, $sql);
+			break;
+		case 'flmUpd':
+			$id = $_POST['id'];
+			$nazwa = $_POST['nazwa'];
+			$sql = "UPDATE filGatunek SET gatNazwa = '$nazwa' WHERE gatID = '$id' OR gatID = $id";
+			send($connect, $sql);
+			break;
+		case 'wyp':
+			$flm = $_POST['flm'];
+			$kln = $_POST['kln'];
+			$wyp = $_POST['wyp'];
+			$odd = $_POST['odd'];
+			$sql = "INSERT INTO filWypozyczenia VALUES (NULL, '$wyp', '$odd', '$flm', '$kln');";
+			send($connect, $sql);
+			break;
 		
 		default:
 			# code...
@@ -55,6 +91,14 @@ function juz_jest_imie_nazwisko($connect, $imie, $nazwisko, $wiek){
 }
 function jest_juz_rez($connect, $imie, $nazwisko, $wiekU){
 	$sql = "SELECT * FROM filRezyser WHERE rezImie = '$imie' AND rezNazwisko = '$nazwisko' AND rezDataUrodzenia = '$wiekU'";
+	if($result = $connect->query($sql)){
+		if($result->num_rows) return 1;
+		else return 0;
+	}
+	return 1;
+}
+function jest_juz_gat($connect, $nazwa){
+	$sql = "SELECT * FROM filGatunek WHERE gatNazwa = '$nazwa';";
 	if($result = $connect->query($sql)){
 		if($result->num_rows) return 1;
 		else return 0;

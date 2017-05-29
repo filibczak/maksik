@@ -14,7 +14,8 @@ url: http://37.8.214.76/~d14.kukiz.krzysztof/
 	- [ ] Oszczędności/Inwestycje
 	- [ ] Ubezbieczenie
 	- [ ] Dodaj własne
-	- [ ] Wykres
-		- [ ] ruznica przychodów, wydatków
-		- [ ] Miesiędzne wydatki
-		- [ ] Wydatki wtg kat.
+- [ ] podsumowanie
+	- [ ] ruznica przychodów, wydatków
+	- [ ] Miesiędzne wydatki
+	- [ ] Wydatki wtg kat.
+- [ ] ikonka zapisu / zapisywania / nie zapisania
