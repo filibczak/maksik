@@ -185,7 +185,43 @@ require_once('../../php/scripts.php');
 	</article>
 	<article id="wydatki">
 		<header>Odchody</header>
-		<section></section>
+		<section>
+			<?php
+			$sql = "SELECT * FROM bd_cat_wyd";
+			$cat = sql2array($sql);
+			foreach($cat as $c){
+				$id = $c['cat_wyd_id'];
+				$name = $c['cat_wyd_name'];
+				?>
+				<table class="cat" data-id="<?php echo $id; ?>">
+					<tr><th colspan="2"><input type="text" class="cat-name" value="<?php echo $name; ?>"></th></tr>
+					<?php
+					$sql = "SELECT * FROM bd_chil_wyd WHERE cat_wyd_id='$id'";
+					$chil = sql2array($sql);
+					foreach($chil as $ch){
+						$id = $ch['chil_wyd_id'];
+						$name = $ch['name'];
+						$value = $ch['value'];
+						?>
+						<tr data-id="<?php echo $id; ?>">
+							<th><input type="text" class="case-name" value="<?php echo $name; ?>"></th>
+							<td><input type="text" class="case-val case_int2txt" data-case_val="<?php echo $value; ?>" value=""></td>
+						</tr>
+						<?php
+					}
+					?>
+					<tr class="sum">
+						<th class="noHover">Razem</th>
+						<td class="noHover sum case_int2txt" data-case_val="0"></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="button" value="Dodaj pole"></td>
+					</tr>
+				</table>
+				<?php
+			}
+			?>
+		</section>
 	</article>
 	<article id="podsumowanie">
 		<header>Podsumowanie</header>
