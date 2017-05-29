@@ -12,7 +12,10 @@ require_once('../../php/scripts.php');
 	<link href="" rel="icon" type="image/x-icon">
 	<link rel="stylesheet" href="bin/style/screen.css">
 	<script src="../../script/jq.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script>
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
 		var przy_sum = 0;
 		var wyd_sum = 0;
 		var ruznica = 0;
@@ -74,6 +77,10 @@ require_once('../../php/scripts.php');
 					//alert(data);
 					location.reload();
 				});
+			});
+			
+			$('#piechart > div > div > div > svg > rect').change(function(){
+				bgcinh();
 			});
 			
 		})//jQ END
@@ -197,6 +204,36 @@ require_once('../../php/scripts.php');
 			parseInt(number);
 			return number;
 		}//betterParseInt END
+
+		function drawChart() {
+
+			var data = google.visualization.arrayToDataTable([
+				['Task', 'Hours per Day']
+				<?php
+				$sql = "SELECT cat_wyd_name name, SUM(value) value FROM bd_chil_wyd NATURAL JOIN bd_cat_wyd GROUP BY cat_wyd_name;";
+				$arr = sql2array($sql);
+				foreach($arr as $a){
+					echo ",
+					['".($a['name'])."', ".($a['value'])."]";
+				}
+				?>
+			]);
+
+			var options = {
+				title: 'Wydatki wdg. Kategorji',
+				backgroundColor: 'inherit'
+			};
+
+			var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+			chart.draw(data, options);
+			bgcinh()
+		}
+		
+		function bgcinh(){
+			$('#piechart div div div svg rect').attr('fill', 'rgba(0,0,0,0)');
+		}
+		
 	</script>
 	
 </head>
@@ -288,7 +325,7 @@ require_once('../../php/scripts.php');
 	</article>
 	<article id="podsumowanie">
 		<header>Podsumowanie</header>
-		<section></section>
+		<section><div id="piechart" style="width: 450px; height: 250px;"></div></section>
 		<footer class="ruznica">34</footer>
 	</article>
 </div>
