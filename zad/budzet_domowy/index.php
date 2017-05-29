@@ -28,7 +28,26 @@ require_once('../../php/scripts.php');
 				chil2cat_sum($this.parent());
 			});
 			
+			$('.case-name').change(function(){
+				var $this = $(this);
+				name_update($this);
+			});
+			
 		})//jQ END
+		
+		function name_update($this){
+			var id = $this.parent().parent().attr('data-id');
+			var prz_wyd = $this.parent().parent().parent().parent().parent().parent().attr('id') == 'przychody' ? 'p':'w';
+			var name = $this.val();
+			$.post('bin/scripts/scripts.php',{
+				op: 'name_update',
+				id: id,
+				pw: prz_wyd,
+				name: name
+			})/*.done(function(data){
+				alert(data);
+			})*/;
+		}//name_update END
 		
 		function val_update($this){
 			var id = $this.parent().parent().attr('data-id');
@@ -42,7 +61,7 @@ require_once('../../php/scripts.php');
 			})/*.done(function(data){
 				alert(data);
 			})*/;
-		}
+		}//val_update END
 		
 		function chil2cat_sum($this){
 			$this = $this.parent().parent();
@@ -56,7 +75,7 @@ require_once('../../php/scripts.php');
 			var $sum = $this.children('.sum').children('.sum');
 			$sum.attr('data-case_val', sum);
 			int2txt($sum, sum);
-		}
+		}//chil2cat_sum END
 		
 		function int2txt($this, val){
 			val = betterParseInt(val);
@@ -78,7 +97,7 @@ require_once('../../php/scripts.php');
 				$this.val(txt);
 			else
 				$this.text(txt);
-		}
+		}//int2txt END
 		
 		function betterParseInt(txt){
 			txt += '';
@@ -104,7 +123,7 @@ require_once('../../php/scripts.php');
 			}
 			parseInt(number);
 			return number;
-		}
+		}//betterParseInt END
 	</script>
 	
 </head>
