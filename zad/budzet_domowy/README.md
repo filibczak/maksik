@@ -1,4 +1,4 @@
-# [Miesięczny budżet domowy](1)
+# [Miesięczny budżet domowy][1]
 url: http://37.8.214.76/~d14.kukiz.krzysztof/
 
 - [x] Przychody
