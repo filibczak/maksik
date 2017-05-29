@@ -24,7 +24,7 @@ require_once('../../php/scripts.php');
 			$('.case_int2txt').change(function(){
 				var $this = $(this);
 				int2txt($this, $this.val());
-				chil2cat_sum($this);
+				chil2cat_sum($this.parent());
 			});
 			
 		})//jQ END
@@ -32,7 +32,6 @@ require_once('../../php/scripts.php');
 		function chil2cat_sum($this){
 			$this = $this.parent().parent();
 			var sum = 0;
-			
 			$this.children('tr').each(function(){
 				$(this).children('td').each(function(){
 					sum += (betterParseInt($(this).children('.case-val').attr('data-case_val')))*1;
