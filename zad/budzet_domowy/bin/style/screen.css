@@ -77,7 +77,7 @@ body {
               box-sizing: border-box; }
               #box > article:nth-child(3n+1) .cat tr td input.case-name, #box > article:nth-child(3n+1) .cat tr th input.case-name {
                 text-align: left; }
-              #box > article:nth-child(3n+1) .cat tr td input.case-valu, #box > article:nth-child(3n+1) .cat tr th input.case-valu {
+              #box > article:nth-child(3n+1) .cat tr td input.case-val, #box > article:nth-child(3n+1) .cat tr th input.case-val {
                 text-align: right; }
               #box > article:nth-child(3n+1) .cat tr td input[type=button], #box > article:nth-child(3n+1) .cat tr th input[type=button] {
                 background-color: rgba(0, 0, 0, 0.2);

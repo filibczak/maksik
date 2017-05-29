@@ -30,19 +30,16 @@ require_once('../../php/scripts.php');
 		})//jQ END
 		
 		function chil2cat_sum($this){
-			$this = $this.parent().parent();
-			$('#wydatki').text($this.html());
-			var tmp = 0;
+			$this = $this.parent().parent().parent();
 			var sum = 0;
-			$this.children('tr td .case-valu').each(function(){
-				tmp = $(this).attr('data-case_val');
-				tmp = betterParseInt(tmp);
-				sum += tmp;
-			});
-			/*alert(sum);
-			alert($this.children().html());*/
-			$this.children('tr .sum').attr('data-case_val', sum);
 			
+			$this.children('tr').each(function(){
+				$(this).children('td').each(function(){
+					/*alert($(this).html());
+					alert($(this).children('.case-val').attr('data-case_val'));*/
+					sum += (betterParseInt($(this).children('.case-val').attr('data-case_val')))*1;
+				});
+			});
 			
 		}
 		
@@ -62,8 +59,10 @@ require_once('../../php/scripts.php');
 			}
 			if(txt == '') txt = '0';
 			txt += ' zł';
-			$this.val(txt);
-			$this.text(txt);
+			if($this.is('input'))
+				$this.val(txt);
+			else
+				$this.text(txt);
 		}
 		
 		function betterParseInt(txt){
@@ -118,7 +117,7 @@ require_once('../../php/scripts.php');
 						?>
 						<tr data-id="<?php echo $id; ?>">
 							<th><input type="text" class="case-name" value="<?php echo $name; ?>"></th>
-							<td><input type="text" class="case-valu case_int2txt" data-case_val="<?php echo $value; ?>" value=""></td>
+							<td><input type="text" class="case-val case_int2txt" data-case_val="<?php echo $value; ?>" value=""></td>
 						</tr>
 						<?php
 					}
