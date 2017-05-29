@@ -10,16 +10,16 @@
 	<link rel="stylesheet" href="css/fontello.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
-		var year 	= 2017;
-		var month 	= 4;
-		var day 	= 7;
+		var year 	= <?php echo date('Y') ?>;
+		var month 	= <?php echo date('m') ?>;
+		var day 	= <?php echo date('d') ?>;
 
 		$(function(){
-			get_calender()
+			get_calender();
+			get_notes();
 
 			$('body')
 			.delegate('#prev_month', 'click', function(){
-				alert(1);
 				month--;
 				if(month <= 0){
 					year--;
@@ -34,69 +34,47 @@
 					month = 1;
 				}
 				get_calender();
+			})
+			.delegate('#kalendarz > table > tbody > tr > td > span', 'click', function(){
+				$('span.check').removeClass('check');
+				$(this).addClass('check');
+				day = parseInt($(this).text());
+				get_notes();
 			});
 		});//jQ END
 
 		function get_calender(){
 			$.post('get_calender',{
 				year: 	year,
+				month: 	month
+			}).done(function(calendar){
+				$('#kalendarz').html(calendar);
+			});
+		}
+		function get_notes(){
+			$.post('get_note',{
+				year: 	year,
 				month: 	month,
 				day: 	day
-			}).done(function(calendar){
-				$('body').html(calendar);
+			}).done(function(notes){
+				$('#notes').html(notes);
 			});
 		}
 	</script>
 </head>
 <body>
-<!--<div id="kalendarz">
-	<header>
-		<span id="prev_month" class="icon-left-open"></span>
-		<span id="active_month"> kwiecien 2017</span>
-		<span id="next_month" class="icon-right-open"></span>
-	</header>
-	<table>
-		<thead>
-			<tr>
-				<th>Pon</th>
-				<th>Wto</th>
-				<th>Śro</th>
-				<th>Czw</th>
-				<th>Pią</th>
-				<th>Sob</th>
-				<th>Nie</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td><span>1</span></td>
-				<td><span>2</span></td>
-				<td><span>3</span></td>
-				<td><span>4</span></td>
-				<td><span>5</span></td>
-			</tr>
-			<tr>
-				<td><span>11</span></td>
-				<td><span>12</span></td>
-				<td><span>13</span></td>
-				<td><span>14</span></td>
-				<td><span>15</span></td>
-				<td><span>14</span></td>
-				<td><span>15</span></td>
-			</tr>
-			<tr>
-				<td><span>21</span></td>
-				<td><span>22</span></td>
-				<td><span>23</span></td>
-				<td><span>24</span></td>
-				<td><span>25</span></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-	</table>
-</div>-->
+	<div id="kalendarz"></div>
+	<div id="notes">
+		<div class="note">
+			<header>Tytul</header>
+			<article>tresc</article>
+		</div>
+		<div class="note">
+			<header>Tytul 2</header>
+			<article>tresc 2</article>
+		</div>
+	</div>
+	<div id="addNote">Dodaj Notatke</div>
+
 </body>
 </html>

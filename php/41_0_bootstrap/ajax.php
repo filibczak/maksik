@@ -39,21 +39,218 @@ function hom(){
 <?php
 }
 function wyp(){
+?>
+<div class="container page-header"> <h1>Wyporzyczenia</h1> </div>
+ <div class="container panel panel-default">
+  <button type="button" class="btn btn-primary glyphicon glyphicon-plus" data-toggle="modal" data-target="#modalFormularz" style="float: right"> Wyporzycz</button>
+    <?php
+      include('../scripts.php');
+      $operacja = '<button type="button" class="btn btn-default glyphicon glyphicon-cog edit edit-kli" aria-label="Left Align"> Edytuj</button>';
+      $sql = "SELECT wypID id, wypDataWyp  wyp, wypDataOddania odt, CONCAT_WS(' ', klImie, klNazwisko) kln, filTytul tytul FROM filWypozyczenia NATURAL JOIN filKlient NATURAL JOIN filFilmy";
+      $arr = sql2array($sql);
+      $il = count($arr);
+      $tb = '';
+      /*  tworzenie tabeli  */
+      $tb .= '<table class="table">';
+      //head
+      $tb .= '<thead>';
+      $tb .= '<tr>';
+        $tb .= '<th>lp.</th>';
+        $tb .= '<th>Klient</th>';
+        $tb .= '<th>Tytuł</th>';
+        $tb .= '<th>Wyporzyczona</th>';
+        $tb .= '<th>Oddano</th>';
+        $tb .= '<th style="width: 150px;">Operacja</th>';
+      $tb .= '<tr>';
+      $tb .= '</thead>';
+      //body
+      $tb .= '<tbody>';
+      for($i = 0; $i < $il; $i++){
+        $tb .= '<tr data-usrid="'.$arr[$i]['id'].'">';
+          $tb .= '<td>'.($i+1).'</td>';
+          $tb .= '<td>'.$arr[$i]['kln'].'</td>';
+          $tb .= '<td>'.$arr[$i]['tytul'].'</td>';
+          $tb .= '<td>'.$arr[$i]['wyp'].'</td>';
+          $tb .= '<td>'.$arr[$i]['odt'].'</td>';
+          $tb .= '<td>'.$operacja.'</td>';
+        $tb .= '</tr>';
+      }
+      $tb .= '</tbody>';
+      $tb .= '</table>';
+      echo $tb;
+    ?>
+</div>
+<div class="modal fade" id="modalFormularz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Wyporzycz</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="modal-body" id="snd-wyp">
 
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Klient</label>
+          <div class="col-sm-10"> 
+            <select class="form-control" name="kln">
+              <option>Wybierz klienta</option>
+              <?php
+                $sql = "SELECT klID id, CONCAT_WS(' ', klImie, klNazwisko) kln FROM filKlient;";
+                $arr = sql2array($sql);
+                foreach ($arr as $key => $arr) {
+                  echo '<option value="'.$arr['id'].'">'.$arr['kln'].'</option>';
+                }
+              ?>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Film</label>
+          <div class="col-sm-10"> 
+            <select class="form-control" name="flm">
+              <option>Wybierz film</option>
+              <?php
+                $sql = "SELECT filID id, filTytul flm FROM filFilmy;";
+                $arr = sql2array($sql);
+                foreach ($arr as $key => $arr) {
+                  echo '<option value="'.$arr['id'].'">'.$arr['flm'].'</option>';
+                }
+              ?>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Wyporzyczono</label>
+          <div class="col-sm-10"><input class="form-control" type="date" name="wyp" value="<?php echo date('Y-m-d'); ?>"></div>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Oddano</label>
+          <div class="col-sm-10"><input class="form-control" type="date" name="odd"> </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <input type="submit" class="btn btn-primary" value="save changes">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<?php
 }
 function flm(){
 ?>
-<div class="container page-header"> <h1>Filmy <small>Twoja biblioteka ruchomych zdięć</small></h1> </div>
+<div class="container page-header"> <h1>Filmy <small>Twoja bibliotek ruchomych obrazów</small></h1> </div>
  <div class="container panel panel-default">
-    <div class="panel-heading">Lista wyporzyczeń</div>
+  <button type="button" class="btn btn-primary glyphicon glyphicon-plus" data-toggle="modal" data-target="#modalFormularz" style="float: right"> Dodaj Film</button>
     <?php
       include('../scripts.php');
-      $operacja = '<button type="button" class="btn btn-default glyphicon glyphicon-cog" aria-label="Left Align"> Edytuj</button>';
-      $sql = "SELECT filID 'Lp.', filtytul 'tytuł', CONCAT(rezNazwisko, ' ', rezImie) 'Reżuser', '$operacja' AS 'Operacja' FROM `filFilmy` NATURAL JOIN filRezyser";
-      $tab = sql2array($sql);
-      $HTMLtable = array2HTMLtable($tab, 'table');
-      echo $HTMLtable;
+      $operacja = '<button type="button" class="btn btn-default glyphicon glyphicon-cog edit edit-flm" aria-label="Left Align"> Edytuj</button>';
+      $sql = "SELECT filID id, filTytul tytul, CONCAT_WS(' ', rezImie, rezNazwisko) rezyser, GatNazwa gatunek, filRokProd rokProdukcji,  filCzasTr czasTrwania FROM filFilmy NATURAL JOIN filRezyser NATURAL JOIN filGatunek";
+      $arr = sql2array($sql);
+      $il = count($arr);
+      $tb = '';
+      /*  tworzenie tabeli  */
+      $tb .= '<table class="table">';
+      //head
+      $tb .= '<thead>';
+      $tb .= '<tr>';
+        $tb .= '<th>lp.</th>';
+        $tb .= '<th>Tytuł</th>';
+        $tb .= '<th>Reżyser</th>';
+        $tb .= '<th>Gatunek</th>';
+        $tb .= '<th>Rok Produkcji</th>';
+        $tb .= '<th>Czas trwania</th>';
+        $tb .= '<th style="width: 150px;">Operacja</th>';
+      $tb .= '<tr>';
+      $tb .= '</thead>';
+      //body
+      $tb .= '<tbody>';
+      for($i = 0; $i < $il; $i++){
+        $tb .= '<tr data-usrid="'.$arr[$i]['id'].'">';
+          $tb .= '<td>'.($i+1).'</td>';
+          $tb .= '<td>'.$arr[$i]['tytul'].'</td>';
+          $tb .= '<td>'.$arr[$i]['rezyser'].'</td>';
+          $tb .= '<td>'.$arr[$i]['gatunek'].'</td>';
+          $tb .= '<td>'.$arr[$i]['rokProdukcji'].'</td>';
+          $tb .= '<td>'.$arr[$i]['czasTrwania'].'</td>';
+          $tb .= '<td>'.$operacja.'</td>';
+        $tb .= '</tr>';
+      }
+      $tb .= '</tbody>';
+      $tb .= '</table>';
+      echo $tb;
     ?>
+</div>
+<div class="modal fade" id="modalFormularz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Dodaj Film</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="modal-body" id="snd-flm">
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Tytuł</label>
+          <div class="col-sm-10"> <input type="text" class="form-control" name="tytul" placeholder="Wpisz tytuł"></div>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Reżyser</label>
+          <div class="col-sm-10"> 
+            <select class="form-control" name="rez" id=".select-rez">
+              <option>Wybierz reżysera</option>
+              <?php
+                $sql = "SELECT rezID id, CONCAT_ws(' ', rezImie, rezNazwisko) rezyser FROM filRezyser;";
+                $arr = sql2array($sql);
+                foreach ($arr as $key => $arr) {
+                  echo '<option value="'.$arr['id'].'">'.$arr['rezyser'].'</option>';
+                }
+              ?>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Gatunek</label>
+          <div class="col-sm-10"> 
+            <select class="form-control" name="gat">
+              <option>Wybierz gatunek</option>
+              <?php
+                $sql = "SELECT gatID id, gatNazwa gat FROM filGatunek;";
+                $arr = sql2array($sql);
+                foreach ($arr as $key => $arr) {
+                  echo '<option value="'.$arr['id'].'">'.$arr['gat'].'</option>';
+                }
+              ?>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Rok prudukcji</label>
+          <div class="col-sm-10"> <input type="number" class="form-control" name="rokProdukcji" placeholder="1337"></div>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Czas trwania</label>
+          <div class="col-sm-10"> <input type="time" class="form-control" name="czasTrwania" placeholder="Czas trwania"></div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <input type="submit" class="btn btn-primary" value="save changes">
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 <?php
 }
@@ -214,7 +411,67 @@ function rez(){
 <?php
 }
 function gat(){
+?>
+<div class="container page-header"> <h1>Gatunki</h1> </div>
+ <div class="container panel panel-default">
+	<button type="button" class="btn btn-primary glyphicon glyphicon-plus" data-toggle="modal" data-target="#modalFormularz" style="float: right"> Dodaj Gatunek</button>
+    <?php
+      include('../scripts.php');
+      $operacja = '<button type="button" class="btn btn-default glyphicon glyphicon-cog edit edit-gat" aria-label="Left Align"> Edytuj</button>';
+      $sql = "SELECT gatID id, gatNazwa Nazwa FROM filGatunek";
+      $arr = sql2array($sql);
+      $il = count($arr);
+      $tb = '';
+      /*	tworzenie tabeli	*/
+      $tb .= '<table class="table">';
+      //head
+      $tb .= '<thead>';
+      $tb .= '<tr>';
+      	$tb .= '<th>lp.</th>';
+      	$tb .= '<th>nazwa gatunku</th>';
+      	$tb .= '<th style="width: 150px;">Operacja</th>';
+      $tb .= '<tr>';
+      $tb .= '</thead>';
+      //body
+      $tb .= '<tbody>';
+      for($i = 0; $i < $il; $i++){
+      	$tb .= '<tr data-usrid="'.$arr[$i]['id'].'">';
+      		$tb .= '<td>'.($i+1).'</td>';
+      		$tb .= '<td>'.$arr[$i]['Nazwa'].'</td>';
+      		$tb .= '<td>'.$operacja.'</td>';
+      	$tb .= '</tr>';
+      }
+      $tb .= '</tbody>';
+      $tb .= '</table>';
+      echo $tb;
+    ?>
+</div>
+<div class="modal fade" id="modalFormularz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Dodaj Gatunek</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<form class="modal-body" id="snd-gat">
 
+				<div class="form-group row">
+				  <label for="inputEmail3" class="col-sm-2 col-form-label">Nazwa</label>
+				  <div class="col-sm-10"> <input type="text" class="form-control" name="nazwa" placeholder="Nazwa"></div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<input type="submit" class="btn btn-primary" value="save changes">
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
+<?php
 }
 function usr(){
 

@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,700&subset=latin-ext");
+body {
+  background-image: url(giftly.png);
+  /*
+  ========================================================
+  This pattern is downloaded from www.subtlepatterns.com 
+  If you need more, that's where to get'em.
+  ========================================================
+  */ }
+
+#box {
+  font-family: 'Roboto', sans-serif;
+  color: grey;
+  font-size: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box; }
+  #box > article {
+    box-sizing: border-box;
+    font-size: 24px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-right: 3px solid grey; }
+    #box > article::-webkit-scrollbar {
+      display: none; }
+    #box > article .cat {
+      border-collapse: collapse;
+      margin: 0 auto;
+      margin-top: 15px;
+      background-color: rgba(0, 0, 0, 0.1); }
+      #box > article .cat tr {
+        border-top: 1px solid grey; }
+        #box > article .cat tr:last-child, #box > article .cat tr:first-child, #box > article .cat tr:nth-child(2) {
+          border-top: none; }
+        #box > article .cat tr:first-child th {
+          text-align: center !important;
+          font-weight: 700; }
+          #box > article .cat tr:first-child th input {
+            text-align: center;
+            font-weight: 700; }
+        #box > article .cat tr th {
+          text-align: left;
+          font-weight: 400; }
+        #box > article .cat tr td {
+          text-align: right; }
+        #box > article .cat tr td, #box > article .cat tr th {
+          margin: 0;
+          width: 50%;
+          height: 20px;
+          padding: 5px 10px;
+          font-size: 18px; }
+          #box > article .cat tr td.noHover, #box > article .cat tr th.noHover {
+            cursor: not-allowed; }
+          #box > article .cat tr td:nth-child(2), #box > article .cat tr th:nth-child(2) {
+            border-left: 1px solid grey; }
+          #box > article .cat tr td input, #box > article .cat tr th input {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            color: grey;
+            margin: 0;
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            box-sizing: border-box; }
+            #box > article .cat tr td input.case-name, #box > article .cat tr th input.case-name {
+              text-align: left; }
+            #box > article .cat tr td input.case-val, #box > article .cat tr th input.case-val {
+              text-align: right; }
+            #box > article .cat tr td input[type=button], #box > article .cat tr th input[type=button] {
+              background-color: rgba(0, 0, 0, 0.2);
+              color: black;
+              cursor: pointer; }
+              #box > article .cat tr td input[type=button]:hover, #box > article .cat tr th input[type=button]:hover {
+                box-shadow: 0 0 10px -5px black; }
+    #box > article .add-cat {
+      padding: 5px;
+      box-sizing: border-box;
+      text-align: center;
+      font-weight: 700;
+      opacity: .4;
+      border: 3px dashed grey;
+      cursor: pointer; }
+      #box > article .add-cat:hover {
+        opacity: 1;
+        border: 3px solid grey; }
+    #box > article:nth-child(3n+1) {
+      width: 20%; }
+      #box > article:nth-child(3n+1) .cat {
+        width: 80%; }
+    #box > article:nth-child(3n+2) {
+      width: 50%; }
+      #box > article:nth-child(3n+2) .cat {
+        width: 40%;
+        float: left;
+        margin: 20px 6%; }
+        #box > article:nth-child(3n+2) .cat:nth-child(2n+0) {
+          margin-right: 0; }
+        #box > article:nth-child(3n+2) .cat:nth-child(2n+1) {
+          margin-right: 0; }
+    #box > article:nth-child(3n+3) {
+      width: 30%;
+      border-right: none; }
+    #box > article > header {
+      background-color: rgba(0, 0, 0, 0.25);
+      width: 100%;
+      height: 48px;
+      font-weight: 900;
+      font-size: 1.5em;
+      text-align: left;
+      padding-left: 15px; }
+    #box > article > section {
+      width: 100%; }
+    #box > article > footer {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      box-sizing: border-box;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.2em;
+      border-top: 3px solid grey; }
+      #box > article > footer.przy-sum {
+        left: 0;
+        width: 20%; }
+      #box > article > footer.wyd-sum {
+        left: 20%;
+        width: 50%; }
+        #box > article > footer.wyd-sum::before {
+          text-align: right;
+          content: "- "; }
+      #box > article > footer.ruznica {
+        left: 70%;
+        width: 30%; }
+        #box > article > footer.ruznica::before {
+          text-align: right;
+          content: "= "; }
