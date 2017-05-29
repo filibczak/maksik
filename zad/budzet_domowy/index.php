@@ -33,6 +33,20 @@ require_once('../../php/scripts.php');
 				name_update($this);
 			});
 			
+			$('.cat-name').change(function(){
+				var id = $(this).parent().parent().parent().parent().attr('data-id');
+				var prz_wyd = $(this).parent().parent().parent().parent().parent().parent().attr('id') == 'przychody' ? 'p':'w';
+				var name = $(this).val();
+				$.post('bin/scripts/scripts.php',{
+					op: 'cat_name_update',
+					id: id,
+					pw: prz_wyd,
+					name: name
+				})/*.done(function(data){
+					alert(data);
+				})*/;
+			});
+			
 		})//jQ END
 		
 		function name_update($this){
@@ -139,8 +153,8 @@ require_once('../../php/scripts.php');
 				$id = $c['cat_przy_id'];
 				$name = $c['cat_przy_name'];
 				?>
-				<table class="cat">
-					<tr><th colspan="2"><input type="text" value="<?php echo $name; ?>"></th></tr>
+				<table class="cat" data-id="<?php echo $id; ?>">
+					<tr><th colspan="2"><input type="text" class="cat-name" value="<?php echo $name; ?>"></th></tr>
 					<?php
 					$sql = "SELECT * FROM bd_chil_przy WHERE cat_przy_id='$id'";
 					$chil = sql2array($sql);
