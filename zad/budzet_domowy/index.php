@@ -30,17 +30,18 @@ require_once('../../php/scripts.php');
 		})//jQ END
 		
 		function chil2cat_sum($this){
-			$this = $this.parent().parent().parent();
+			$this = $this.parent().parent();
 			var sum = 0;
 			
 			$this.children('tr').each(function(){
 				$(this).children('td').each(function(){
-					/*alert($(this).html());
-					alert($(this).children('.case-val').attr('data-case_val'));*/
 					sum += (betterParseInt($(this).children('.case-val').attr('data-case_val')))*1;
 				});
 			});
 			
+			var $sum = $this.children('.sum').children('.sum');
+			$sum.attr('data-case_val', sum);
+			int2txt($sum, sum);
 		}
 		
 		function int2txt($this, val){
@@ -122,7 +123,7 @@ require_once('../../php/scripts.php');
 						<?php
 					}
 					?>
-					<tr>
+					<tr class="sum">
 						<th class="noHover">Razem</th>
 						<td class="noHover sum case_int2txt" data-case_val="0"></td>
 					</tr>
