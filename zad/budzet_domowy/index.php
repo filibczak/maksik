@@ -245,7 +245,7 @@ require_once('../../php/scripts.php');
 		<footer class="przy-sum">34</footer>
 	</article>
 	<article id="wydatki">
-		<header>Odchody</header>
+		<header>Wydatki</header>
 		<section>
 			<?php
 			$sql = "SELECT * FROM bd_cat_wyd";
