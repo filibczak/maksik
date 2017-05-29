@@ -23,11 +23,26 @@ require_once('../../php/scripts.php');
 			
 			$('.case_int2txt').change(function(){
 				var $this = $(this);
+				val_update($this);
 				int2txt($this, $this.val());
 				chil2cat_sum($this.parent());
 			});
 			
 		})//jQ END
+		
+		function val_update($this){
+			var id = $this.parent().parent().attr('data-id');
+			var prz_wyd = $this.parent().parent().parent().parent().parent().parent().attr('id') == 'przychody' ? 'p':'w';
+			var val = betterParseInt($this.val());
+			$.post('bin/scripts/scripts.php',{
+				op: 'val_update',
+				id: id,
+				pw: prz_wyd,
+				val: val
+			})/*.done(function(data){
+				alert(data);
+			})*/;
+		}
 		
 		function chil2cat_sum($this){
 			$this = $this.parent().parent();
