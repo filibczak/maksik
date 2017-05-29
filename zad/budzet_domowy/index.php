@@ -13,12 +13,16 @@ require_once('../../php/scripts.php');
 	<link rel="stylesheet" href="bin/style/screen.css">
 	<script src="../../script/jq.js"></script>
 	<script>
+		var przy_sum = 0;
+		var wyd_sum = 0;
+		var ruznica = 0;
 		$(function(){
 			
 			$('.case_int2txt').each(function(){
 				var $this = $(this);
 				int2txt($this, $this.attr('data-case_val'));
 				chil2cat_sum($this);
+				main_sum()
 			});
 			
 			$('.case_int2txt').change(function(){
@@ -26,6 +30,7 @@ require_once('../../php/scripts.php');
 				val_update($this);
 				int2txt($this, $this.val());
 				chil2cat_sum($this.parent());
+				main_sum()
 			});
 			
 			$('.case-name').change(function(){
@@ -57,10 +62,46 @@ require_once('../../php/scripts.php');
 				}).done(function(data){
 					//alert(data);
 					location.reload();
-				});;
+				});
 			})
 			
+			$('.add-cat').click(function(){
+				var prz_wyd = $(this).parent().parent().attr('id') == 'przychody' ? 'p':'w';
+				$.post('bin/scripts/scripts.php',{
+					op: 'add_cat',
+					pw: prz_wyd
+				}).done(function(data){
+					//alert(data);
+					location.reload();
+				});
+			});
+			
 		})//jQ END
+		
+		function main_sum(){
+			przy_sum = 0;
+			wyd_sum = 0;
+			$('#przychody td.sum').each(function(){
+				przy_sum += (betterParseInt($(this).attr('data-case_val')))*1;
+			});
+			$('#wydatki td.sum').each(function(){
+				wyd_sum += (betterParseInt($(this).attr('data-case_val')))*1;
+			});
+			ruznica = przy_sum - wyd_sum;
+			
+			$('#przychody footer').text(int2val(betterParseInt(przy_sum)));
+			$('#wydatki footer').text(int2val(betterParseInt(wyd_sum)));
+			$('#podsumowanie footer').text(int2val(betterParseInt(ruznica)));
+			
+			if(ruznica > 0){
+				$('#podsumowanie footer').css('color', 'green');
+			}else if(ruznica < 0){
+				$('#podsumowanie footer').css('color', 'red');
+			}else{
+				$('#podsumowanie footer').css('color', 'orange');
+			}
+			
+		}
 		
 		function name_update($this){
 			var id = $this.parent().parent().attr('data-id');
@@ -107,6 +148,14 @@ require_once('../../php/scripts.php');
 		function int2txt($this, val){
 			val = betterParseInt(val);
 			$this.attr('data-case_val', val);
+			txt = int2val(val);
+			if($this.is('input'))
+				$this.val(txt);
+			else
+				$this.text(txt);
+		}//int2txt END
+		
+		function int2val(val){
 			var dl = val.length;
 			var txt = '';
 			var co3 = 3;
@@ -120,11 +169,8 @@ require_once('../../php/scripts.php');
 			}
 			if(txt == '') txt = '0';
 			txt += ' zł';
-			if($this.is('input'))
-				$this.val(txt);
-			else
-				$this.text(txt);
-		}//int2txt END
+			return txt;
+		}
 		
 		function betterParseInt(txt){
 			txt += '';
@@ -196,6 +242,7 @@ require_once('../../php/scripts.php');
 			?>
 			<div class="cat add-cat">Dodaj kategorje</div>
 		</section>
+		<footer class="przy-sum">34</footer>
 	</article>
 	<article id="wydatki">
 		<header>Odchody</header>
@@ -237,10 +284,12 @@ require_once('../../php/scripts.php');
 			?>
 			<div class="cat add-cat">Dodaj kategorje</div>
 		</section>
+		<footer class="wyd-sum">34</footer>
 	</article>
 	<article id="podsumowanie">
 		<header>Podsumowanie</header>
 		<section></section>
+		<footer class="ruznica">34</footer>
 	</article>
 </div>
 </body>

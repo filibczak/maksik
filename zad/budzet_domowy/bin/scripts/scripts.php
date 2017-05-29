@@ -7,6 +7,7 @@ if(isset($_POST['op'])){
 		case 'name_update':			name_update($_POST);			break;
 		case 'cat_name_update':	cat_name_update($_POST);	break;
 		case 'add_chil':				add_chil($_POST);					break;
+		case 'add_cat':					add_cat($_POST);					break;
 	}
 }
 
@@ -79,4 +80,18 @@ function add_chil($p){
 		if(!$connect->query($sql)) echo 'błąd w wysyłaniu do bazy';
 	}else echo 'błąd połączenia z bazą';
 }
+
+function add_cat($p){
+	print_r($p);
+	if($p['pw']=='p'){
+		$tabela = 'bd_cat_przy';
+	}else{
+		$tabela = 'bd_cat_wyd';
+	}
+	$sql = "INSERT INTO $tabela VALUES(null, 'Nowa kategorja')";
+	if($connect = polacz_db()){
+		if(!$connect->query($sql)) echo 'błąd w wysyłaniu do bazy';
+	}else echo 'błąd połączenia z bazą';
+}	
+	
 ?>
