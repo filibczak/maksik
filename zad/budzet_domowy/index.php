@@ -47,6 +47,19 @@ require_once('../../php/scripts.php');
 				})*/;
 			});
 			
+			$('.add-chil').click(function(){
+				var id = $(this).parent().parent().parent().parent().attr('data-id');
+				var prz_wyd = $(this).parent().parent().parent().parent().parent().parent().attr('id') == 'przychody' ? 'p':'w';
+				$.post('bin/scripts/scripts.php',{
+					op: 'add_chil',
+					id: id,
+					pw: prz_wyd
+				}).done(function(data){
+					//alert(data);
+					location.reload();
+				});;
+			})
+			
 		})//jQ END
 		
 		function name_update($this){
@@ -175,12 +188,13 @@ require_once('../../php/scripts.php');
 						<td class="noHover sum case_int2txt" data-case_val="0"></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="button" value="Dodaj pole"></td>
+						<td colspan="2"><input type="button" class="add-chil" value="Dodaj pole"></td>
 					</tr>
 				</table>
 				<?php
 			}
 			?>
+			<div class="cat add-cat">Dodaj kategorje</div>
 		</section>
 	</article>
 	<article id="wydatki">
@@ -215,12 +229,13 @@ require_once('../../php/scripts.php');
 						<td class="noHover sum case_int2txt" data-case_val="0"></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="button" value="Dodaj pole"></td>
+						<td colspan="2"><input type="button" class="add-chil" value="Dodaj pole"></td>
 					</tr>
 				</table>
 				<?php
 			}
 			?>
+			<div class="cat add-cat">Dodaj kategorje</div>
 		</section>
 	</article>
 	<article id="podsumowanie">

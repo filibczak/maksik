@@ -31,62 +31,82 @@ body {
     border-right: 3px solid grey; }
     #box > article::-webkit-scrollbar {
       display: none; }
+    #box > article .cat {
+      border-collapse: collapse;
+      margin: 0 auto;
+      margin-top: 15px;
+      background-color: rgba(0, 0, 0, 0.1); }
+      #box > article .cat tr {
+        border-top: 1px solid grey; }
+        #box > article .cat tr:last-child, #box > article .cat tr:first-child, #box > article .cat tr:nth-child(2) {
+          border-top: none; }
+        #box > article .cat tr:first-child th {
+          text-align: center !important;
+          font-weight: 700; }
+          #box > article .cat tr:first-child th input {
+            text-align: center;
+            font-weight: 700; }
+        #box > article .cat tr th {
+          text-align: left;
+          font-weight: 400; }
+        #box > article .cat tr td {
+          text-align: right; }
+        #box > article .cat tr td, #box > article .cat tr th {
+          margin: 0;
+          width: 50%;
+          height: 20px;
+          padding: 5px 10px;
+          font-size: 18px; }
+          #box > article .cat tr td.noHover, #box > article .cat tr th.noHover {
+            cursor: not-allowed; }
+          #box > article .cat tr td:nth-child(2), #box > article .cat tr th:nth-child(2) {
+            border-left: 1px solid grey; }
+          #box > article .cat tr td input, #box > article .cat tr th input {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            color: grey;
+            margin: 0;
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            box-sizing: border-box; }
+            #box > article .cat tr td input.case-name, #box > article .cat tr th input.case-name {
+              text-align: left; }
+            #box > article .cat tr td input.case-val, #box > article .cat tr th input.case-val {
+              text-align: right; }
+            #box > article .cat tr td input[type=button], #box > article .cat tr th input[type=button] {
+              background-color: rgba(0, 0, 0, 0.2);
+              color: black;
+              cursor: pointer; }
+              #box > article .cat tr td input[type=button]:hover, #box > article .cat tr th input[type=button]:hover {
+                box-shadow: 0 0 10px -5px black; }
+    #box > article .add-cat {
+      padding: 5px;
+      box-sizing: border-box;
+      text-align: center;
+      font-weight: 700;
+      opacity: .4;
+      border: 3px dashed grey;
+      cursor: pointer; }
+      #box > article .add-cat:hover {
+        opacity: 1;
+        border: 3px solid grey; }
     #box > article:nth-child(3n+1) {
       width: 20%; }
       #box > article:nth-child(3n+1) .cat {
-        border-collapse: collapse;
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 15px;
-        background-color: rgba(0, 0, 0, 0.1); }
-        #box > article:nth-child(3n+1) .cat tr {
-          border-bottom: 1px solid grey; }
-          #box > article:nth-child(3n+1) .cat tr:last-child, #box > article:nth-child(3n+1) .cat tr:first-child {
-            border-bottom: none; }
-          #box > article:nth-child(3n+1) .cat tr:first-child th {
-            text-align: center !important;
-            font-weight: 700; }
-            #box > article:nth-child(3n+1) .cat tr:first-child th input {
-              text-align: center;
-              font-weight: 700; }
-          #box > article:nth-child(3n+1) .cat tr th {
-            text-align: left;
-            font-weight: 400; }
-          #box > article:nth-child(3n+1) .cat tr td {
-            text-align: right; }
-          #box > article:nth-child(3n+1) .cat tr td, #box > article:nth-child(3n+1) .cat tr th {
-            margin: 0;
-            width: 50%;
-            height: 20px;
-            padding: 5px 10px;
-            font-size: 18px; }
-            #box > article:nth-child(3n+1) .cat tr td.noHover, #box > article:nth-child(3n+1) .cat tr th.noHover {
-              cursor: not-allowed; }
-            #box > article:nth-child(3n+1) .cat tr td:nth-child(2), #box > article:nth-child(3n+1) .cat tr th:nth-child(2) {
-              border-left: 1px solid grey; }
-            #box > article:nth-child(3n+1) .cat tr td input, #box > article:nth-child(3n+1) .cat tr th input {
-              font-family: 'Roboto', sans-serif;
-              font-size: 18px;
-              color: grey;
-              margin: 0;
-              border: none;
-              outline: none;
-              width: 100%;
-              height: 100%;
-              background-color: inherit;
-              box-sizing: border-box; }
-              #box > article:nth-child(3n+1) .cat tr td input.case-name, #box > article:nth-child(3n+1) .cat tr th input.case-name {
-                text-align: left; }
-              #box > article:nth-child(3n+1) .cat tr td input.case-val, #box > article:nth-child(3n+1) .cat tr th input.case-val {
-                text-align: right; }
-              #box > article:nth-child(3n+1) .cat tr td input[type=button], #box > article:nth-child(3n+1) .cat tr th input[type=button] {
-                background-color: rgba(0, 0, 0, 0.2);
-                color: black;
-                cursor: pointer; }
-                #box > article:nth-child(3n+1) .cat tr td input[type=button]:hover, #box > article:nth-child(3n+1) .cat tr th input[type=button]:hover {
-                  box-shadow: 0 0 10px -5px black; }
+        width: 80%; }
     #box > article:nth-child(3n+2) {
       width: 50%; }
+      #box > article:nth-child(3n+2) .cat {
+        width: 40%;
+        float: left;
+        margin: 20px 6%; }
+        #box > article:nth-child(3n+2) .cat:nth-child(2n+0) {
+          margin-right: 0; }
+        #box > article:nth-child(3n+2) .cat:nth-child(2n+1) {
+          margin-right: 0; }
     #box > article:nth-child(3n+3) {
       width: 30%;
       border-right: none; }

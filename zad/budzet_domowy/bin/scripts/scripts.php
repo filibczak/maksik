@@ -6,6 +6,7 @@ if(isset($_POST['op'])){
 		case 'val_update':			val_update($_POST);				break;
 		case 'name_update':			name_update($_POST);			break;
 		case 'cat_name_update':	cat_name_update($_POST);	break;
+		case 'add_chil':				add_chil($_POST);					break;
 	}
 }
 
@@ -64,4 +65,18 @@ function cat_name_update($p){
 		if(!$connect->query($sql)) echo 'błąd w wysyłaniu do bazy';
 	}else echo 'błąd połączenia z bazą';
 }//cat_name_update END
+
+function add_chil($p){
+	print_r($p);
+	if($p['pw']=='p'){
+		$tabela = 'bd_chil_przy';
+	}else{
+		$tabela = 'bd_chil_wyd';
+	}
+	$id = $p['id'];
+	$sql = "INSERT INTO $tabela VALUES(null, '$id', 'Nowa wartość', '100')";
+	if($connect = polacz_db()){
+		if(!$connect->query($sql)) echo 'błąd w wysyłaniu do bazy';
+	}else echo 'błąd połączenia z bazą';
+}
 ?>
