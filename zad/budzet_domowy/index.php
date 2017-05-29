@@ -16,14 +16,36 @@ require_once('../../php/scripts.php');
 		$(function(){
 			
 			$('.case_int2txt').each(function(){
-				int2txt($(this), $(this).attr('data-case_val'));
+				var $this = $(this);
+				int2txt($this, $this.attr('data-case_val'));
+				chil2cat_sum($this);
 			});
 			
-			$('input').change(function(){
-				int2txt($(this), $(this).val());
+			$('.case_int2txt').change(function(){
+				var $this = $(this);
+				int2txt($this, $this.val());
+				chil2cat_sum($this);
 			});
 			
 		})//jQ END
+		
+		function chil2cat_sum($this){
+			$this = $this.parent().parent();
+			$('#wydatki').text($this.html());
+			var tmp = 0;
+			var sum = 0;
+			$this.children('tr td .case-valu').each(function(){
+				tmp = $(this).attr('data-case_val');
+				tmp = betterParseInt(tmp);
+				sum += tmp;
+			});
+			/*alert(sum);
+			alert($this.children().html());*/
+			$this.children('tr .sum').attr('data-case_val', sum);
+			
+			
+		}
+		
 		function int2txt($this, val){
 			val = betterParseInt(val);
 			$this.attr('data-case_val', val);
@@ -38,6 +60,7 @@ require_once('../../php/scripts.php');
 					txt = ' ' + txt;
 				}
 			}
+			if(txt == '') txt = '0';
 			txt += ' zł';
 			$this.val(txt);
 			$this.text(txt);
@@ -47,7 +70,7 @@ require_once('../../php/scripts.php');
 			txt += '';
 			var dl = txt.length;
 			var number = '';
-			for(i = 0; i < dl-1; i++){
+			for(i = 0; i < dl; i++){
 				switch(txt[i]){
 					case '0':
 					case '1':
@@ -82,7 +105,6 @@ require_once('../../php/scripts.php');
 			foreach($cat as $c){
 				$id = $c['cat_przy_id'];
 				$name = $c['cat_przy_name'];
-				$sum = $c['cat_przy_sum'];
 				?>
 				<table class="cat">
 					<tr><th colspan="2"><input type="text" value="<?php echo $name; ?>"></th></tr>
@@ -103,7 +125,7 @@ require_once('../../php/scripts.php');
 					?>
 					<tr>
 						<th class="noHover">Razem</th>
-						<td class="noHover case_int2txt" data-case_val="<?php echo $sum; ?>" value=""></td>
+						<td class="noHover sum case_int2txt" data-case_val="0"></td>
 					</tr>
 					<tr>
 						<td colspan="2"><input type="button" value="Dodaj pole"></td>
