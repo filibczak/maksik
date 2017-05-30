@@ -7,4 +7,4 @@
 - [ ] Wstawianie tekstów
 - [ ] Wstawianie zdjęć
 
-[1]: http://37.8.214.76/~d14.kukiz.krzysztof/zad-video-tutorial
+[1]: http://37.8.214.76/~d14.kukiz.krzysztof/zad/video-tutorial
