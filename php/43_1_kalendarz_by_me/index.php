@@ -63,6 +63,7 @@
 	</script>
 </head>
 <body>
+<main class="blure">
 	<div id="kalendarz"></div>
 	<div id="notes">
 		<div class="note">
@@ -75,6 +76,13 @@
 		</div>
 	</div>
 	<div id="addNote">Dodaj Notatke</div>
-
+</main>
+<div id="popup">
+	<header>
+		<h1>PopUp</h1>
+		<div id="exit">X</div>
+	</header>
+	<article></article>
+</div>
 </body>
 </html>

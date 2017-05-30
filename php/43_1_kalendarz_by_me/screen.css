@@ -62,7 +62,8 @@
 #kalendarz table tbody tr td span:hover{
 	box-shadow: inset 0 0 10px black;
 }
-.note{
+.note,
+#addNote{
 	margin-top: 15px;
 	background-color: grey;
 	width: 400px;
@@ -82,4 +83,50 @@
 	padding: 8px 5px;
 	box-shadow: inset 0 0 10px black;
 	font-size: .8em;
+}
+.is-note::before{
+	/*content: 'im hear';*/
+	content: '';
+	display: inline;
+	background-color: red;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	margin: 3px 3px 0 0;
+	float: right;
+}
+#addNote{
+	box-sizing: border-box;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+#addNote:hover{
+	box-shadow: 0 0 10px -3px black;
+}
+.blure{
+	filter: blur(5px);
+}
+#popup{
+	position: fixed;
+	top: calc(100%/2 - 50px/2);
+	left: calc(100%/2 - 50px/2);
+	min-height: 50px;
+	min-width: 50px;
+	background-color: cyyan;
+	box-sizing: border-box;
+}
+#popup > header{
+	display: block;
+	width: 100%;
+	height: 50px;
+	background-color: rgba(0,0,0,.7);
+}
+#popup > header> *{
+	display: inline;
+}
+#popup > article{
+	display: block;
+	width: 100%;
+	min-height: 100px;
 }

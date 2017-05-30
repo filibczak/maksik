@@ -31,13 +31,19 @@
 	</thead>
 	<tbody>
 		<?php
+			$xml = simplexml_load_file('calender.xml');
 			for($i = 0; $i < 6; $i++){
 				echo '<tr>';
 				for($j = 0; $j < 7; $j++){
 					$toDay = ($i*7)+ $j+1+1 - $monthsFirstDay;
+					$y = 'y-'.$year;
+					$m = 'm-'.$month;
+					$d = 'd-'.$toDay;
+					if(@$xml->$y->$m->$d->note) $cls = 'is-note';
+					else $cls = '';
 					if($toDay > 0 && $toDay <= $monthsDaysNumber )
-						if($toDay == $toDayDay && $toDayMonth == $month && $toDayYear == $year) echo '<td><span class="toDay check">'.$toDay.'</span></td>';
-						else 																	echo '<td><span class="is-note">'.$toDay.'</span></td>';
+						if($toDay == $toDayDay && $toDayMonth == $month && $toDayYear == $year) echo '<td class="'.$cls.'"><span class="toDay check">'.$toDay.'</span></td>';
+						else 																	echo '<td class="'.$cls.'"><span>'.$toDay.'</span></td>';
 					else
 						echo '<td></td>';
 				}

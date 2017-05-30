@@ -8,7 +8,7 @@ $y = 'y-'.$year;
 $m = 'm-'.$month;
 $d = 'd-'.$day;
 
-if($xml->$y->$m->$d->note)
+if(@$xml->$y->$m->$d->note)
 foreach ($xml->$y->$m->$d->note as $note) {
 	echo '<div class="note">';
 	echo '<header>'.($note->header).'</header>';

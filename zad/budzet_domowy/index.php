@@ -235,6 +235,11 @@ require_once('../../php/scripts.php');
 		}
 		
 	</script>
+	<style type="text/css">
+		article > section{
+			padding-bottom: 150px;
+		}
+	</style>
 	
 </head>
 <body>
