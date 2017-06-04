@@ -16,7 +16,7 @@
 </head>
 <body>
 <div id="box">
-dd s y w
+
 </div>
 </body>
 </html>
